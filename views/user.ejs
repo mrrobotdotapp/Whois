@@ -4,13 +4,13 @@
     function generateBadge(verified = false) {
         if (flags.length < 1) return;
         if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
-        if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Verified Bot">`;
+        if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
         return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;;
     }
 %>
 <div class="container">
     <div class="card-body bg-transparent bg-alpha-dark text-white mt-5 shadow-sm">
-        <button class="btn btn-discord-green rounded float-right" onclick="location.href='/'">Return to Home</button>
+        <button class="btn btn-discord-green rounded float-right" onclick="location.href='/'">Accueil</button>
         <div class="row">
             <div class="col-sm-2 avatar">
                 <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" draggable="false" class="rounded float-left avatar" alt="avatar">
@@ -28,10 +28,10 @@
                 <% }}) %></h1>
                 <hr class="bg-transparent my-4">
                 <h5><b>ID :</b> <%= user.id %></h5>
-                <h5><b>Username :</b> <%= user.username %></h5>
-                <h5><b>Discriminator :</b> <%= user.discriminator %></h5>
-                <h5><b>This is a bot ? </b> <%= user.bot ? "Yes" : "Nope" %><%= user.verified ? " and verified. ✔" : "" %></h5>
-                <h5 data-toggle="tooltip" data-placement="top" title="Local date"><b>Created at :</b> <%= user.createdAt.toLocaleString('fr-FR') %></h5>
+                <h5><b>Pseudo :</b> <%= user.username %></h5>
+                <h5><b>Discriminateur :</b> <%= user.discriminator %></h5>
+                <h5><b>C'est un robot ? </b> <%= user.bot ? "Oui " : "Nope" %><%= user.verified ? " et verifié. ✔" : "" %></h5>
+                <h5 data-toggle="tooltip" data-placement="top" title="Date locale"><b>Créée-le :</b> <%= user.createdAt.toLocaleString('fr-FR') %></h5>
             </div>
         </div>
     </div>

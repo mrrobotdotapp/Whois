@@ -40,7 +40,7 @@ app.get("/:userID", async (req, res) => {
     // fetch user
     const user = userid === client.user.id ? client.user : await client.users.fetch(getID(userid)).catch(e => {});
     if (!user) return res.render("index", {
-        error: "Invalid user ID !"
+        error: "ID utilisateur non valide !"
     });
     if (!user.flags) await user.fetchFlags();
     // get data
