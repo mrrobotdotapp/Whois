@@ -9,4 +9,4 @@ Get any Discord user/bot informations by ID !
 
 rename `config.example.js` to `config.js` and check them.
 
-[![Badge forked from](https://img.shields.io/badge/Forked-from%20ssoraa%2Fdiscord.id-black?logo=GitHub&style=for-the-badge)]()
+[![Badge forked from](https://img.shields.io/badge/Forked-from%20ssoraa%2Fdiscord.id-black?logo=GitHub&style=for-the-badge)](https://github.com/ssoraa/discord.id)
