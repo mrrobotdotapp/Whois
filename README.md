@@ -4,7 +4,7 @@ Obtiens un peu toutes les informations concernant un compte Discord depuis son I
 
 # Preview
 
-![image](https://user-images.githubusercontent.com/14293805/92308046-15077100-ef9b-11ea-90a5-547bf3c912fe.png)
+![image](https://user-images.githubusercontent.com/14293805/92952935-19330300-f461-11ea-93d5-024399415eb2.png)
 
 # Comment l'installer ?
 
