@@ -7,22 +7,6 @@
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/?utm_source=pwa",
-  "shortcuts": [
-    {
-      "name": "Homepage of Mr. Robøt",
-      "short_name": "Home",
-      "description": "View the mainpage of Mr. Robøt",
-      "url": "https://mrrobot.app/?utm_source=whois_pwa",
-      "icons": [{ "src": "/img/mrrobot_rounded.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Add this bot to your server",
-      "short_name": "Add Mr. Robøt",
-      "description": "Add the bot on your Discord server",
-      "url": "https://mrrobot.app/add?utm_source=whois_pwa",
-      "icons": [{ "src": "/img/mrrobot_rounded.png", "sizes": "192x192" }]
-    }
-  ],
   "icons": [
     {
       "src": "/img/manifest/72x72.png",
