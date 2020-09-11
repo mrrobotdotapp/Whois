@@ -6,6 +6,9 @@ const client = new (require("discord.js")).Client();
 const Badges = require("./Badges");
 const PORT = config.PORT || 3000;
 
+const moment = require('moment')
+moment.locale('fr')
+
 client.on("ready", () => {
     client.user.setStatus("invisible");
 });
@@ -54,7 +57,8 @@ app.get("/:userID", async (req, res) => {
 
     return res.render("user", {
         user,
-        flags
+        flags,
+        moment
     });
 });
 
