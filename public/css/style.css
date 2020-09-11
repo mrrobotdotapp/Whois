@@ -29,13 +29,19 @@ a:focus {
     transition-duration: .5s;
     color: var(--blurple) !important;
 }
+h1,
+h5 {
+    word-break: break-word;
+}
 .avatar {
     height: 140px;
     width: 140px;
     border-radius: 50% !important;
 }
+.username {
+    margin-top: 25px;
+}
 .badges {
-    height: 30px;
     max-width: 35px;
     cursor: pointer;
 }
@@ -44,6 +50,10 @@ a:focus {
 }
 .botbadge-v {
     height: 23px;
+}
+.inf_colored {
+    color: var(--blurple);
+    font-family: system-ui, sans-serif;
 }
 .required {
     color: #d9534f;

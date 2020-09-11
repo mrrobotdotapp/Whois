@@ -1,11 +1,17 @@
 <%- include("./partials/header.ejs") %>
 <%- include("./partials/loader.ejs") %>
 <%
+    function checkDays(date) {
+        let now = new Date()
+        let diff = now.getTime() - date.getTime()
+        let days = Math.floor(diff / 86400000)
+        return days + (days === 1 ? " jour" : " jours")
+    }
     function generateBadge(verified = false) {
         if (flags.length < 1) return;
         if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
         if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
-        return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;;
+        return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
     }
 %>
 <div class="container">
@@ -27,11 +33,12 @@
                 <img class="img-fluid badges" draggable="false" src="<%= badge.url %>" data-toggle="tooltip" data-placement="top" title="<%= badge.name %>" alt="<%= badge.name %> Badge">
                 <% }}) %></h1>
                 <hr class="bg-transparent my-4">
-                <h5><b>ID :</b> <%= user.id %></h5>
-                <h5><b>Pseudo :</b> <%= user.username %></h5>
-                <h5><b>Discriminateur :</b> <%= user.discriminator %></h5>
-                <h5><b>C'est un robot ? </b> <%= user.bot ? "Oui " : "Nope" %><%= user.verified ? " et verifié. ✔" : "" %></h5>
-                <h5 data-toggle="tooltip" data-placement="top" title="Date locale"><b>Créé-le :</b> <%= user.createdAt.toLocaleString('fr-FR') %></h5>
+                <h5>🔧 ID <span class="inf_colored"><%= user.id %></span></h5>
+                <h5>✌ Pseudo <span class="inf_colored"><%= user.username %></span></h5>
+                <h5>#️⃣ Discriminateur <span class="inf_colored">#<%= user.discriminator %></span></h5>
+                <h5>🤖 Est-il/elle un robot ? <span class="inf_colored"><%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %></span></h5>
+                <h5>📆 Créé le <span class="inf_colored" data-toggle="tooltip" data-placement="bottom" title="Heure locale"><%= moment(user.createdAt).format('dddd LL à LT') %></span></h5>
+                <h5>⏱ Nombre de jour <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h5>
             </div>
         </div>
     </div>
