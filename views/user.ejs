@@ -17,20 +17,20 @@
     <meta name="description"
           content="
           🧐 ・Pseudo <%= user.username %>
-          #️ ・Discriminateur #<%= user.discriminator %>
+          #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⏱ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
+          ⏲ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
     <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-    <meta property="og:site_name" content="<%= user.id %> — Fiche d'information" />
+    <meta property="og:site_name" content="ID : <%= user.id %> — Fiche d'information" />
     <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
     <meta name="twitter:description"
           content="
           🧐 ・Pseudo <%= user.username %>
-          #️ ・Discriminateur #<%= user.discriminator %>
+          #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⏱ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
+          ⏲ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
     <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
     <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
 </head>
@@ -72,7 +72,7 @@
                 <h5>#️⃣ ・ Discriminateur <span class="inf_colored">#<%= user.discriminator %></span></h5>
                 <h5>🤖 ・ Est-il/elle un robot ? <span class="inf_colored"><%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %></span></h5>
                 <h5>📆 ・ Créé le <span class="inf_colored" data-toggle="tooltip" data-placement="bottom" title="Heure locale"><%= moment(user.createdAt).format('dddd LL à LT') %></span></h5>
-                <h5>⏱ ・ Nombre de jour <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h5>
+                <h5>⏲ ・ Nombre de jour <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h5>
             </div>
         </div>
     </div>
