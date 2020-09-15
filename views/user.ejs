@@ -1,28 +1,27 @@
 <%- include("./partials/header.ejs") %>
-<%
-function checkDays(date) {
-    let now = new Date()
-    let diff = now.getTime() - date.getTime()
-    let days = Math.floor(diff / 86400000)
-    return days + (days === 1 ? " jour" : " jours")
-}
-function generateBadge(verified = false) {
-    if (flags.length < 1) return;
-    if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
-    if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
-    return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
-}
-%>
-<title><%= user.username %> — Whois sur Discord</title>
-<meta name="description" content="🔧 ID <%= user.id %> \n✌ Pseudo <%= user.username %> \n#️⃣ Discriminateur #<%= user.discriminator %> \n🤖 Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %> \n⏱ Nombre de jour <%= checkDays(user.createdAt) %> jours"/>
-<meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-<meta name="theme-color" content="#7289da">
+    <%
+    function checkDays(date) {
+        let now = new Date()
+        let diff = now.getTime() - date.getTime()
+        let days = Math.floor(diff / 86400000)
+        return days + (days === 1 ? " jour" : " jours")
+    }
+    function generateBadge(verified = false) {
+        if (flags.length < 1) return;
+        if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
+        if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
+        return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
+    }
+    %>
+    <title><%= user.username %> — Whois sur Discord</title>
+    <meta name="description" content="🔧 ID <%= user.id %> \n✌ Pseudo <%= user.username %> \n#️⃣ Discriminateur #<%= user.discriminator %> \n🤖 Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %> \n⏱ Nombre de jour <%= checkDays(user.createdAt) %> jours"/>
+    <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
 
-<meta property="og:site_name" content="<%= user.id %> — Fiche d'information" />
-<meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
-<meta name="twitter:description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !" />
-<meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-<meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
+    <meta property="og:site_name" content="<%= user.id %> — Fiche d'information" />
+    <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
+    <meta name="twitter:description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !" />
+    <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
+    <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
 </head>
 <%- include("./partials/loader.ejs") %>
 
