@@ -16,18 +16,20 @@
     <title><%= user.username %> — Whois sur Discord</title>
     <meta name="description"
           content="
-              ✌ ・Pseudo <%= user.username %>
-              #️⃣ ・Discriminateur #<%= user.discriminator %>
-              🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
-              ⏱ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
+          🧐 ・Pseudo <%= user.username %>
+          #️ ・Discriminateur #<%= user.discriminator %>
+          🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
+          📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
+          ⏱ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
     <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
     <meta property="og:site_name" content="<%= user.id %> — Fiche d'information" />
     <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
     <meta name="twitter:description"
           content="
-          ✌ ・Pseudo <%= user.username %>
-          #️⃣ ・Discriminateur #<%= user.discriminator %>
+          🧐 ・Pseudo <%= user.username %>
+          #️ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
+          📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
           ⏱ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
     <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
     <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
