@@ -15,15 +15,11 @@
     <meta name="twitter:url" content="https://whois.mrrobot.app/">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@Thomasbnt_" />
+
     <meta name="twitter:title" content="Mr. Robøt — Whois sur Discord" />
     <meta name="twitter:description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !" />
     <meta name="twitter:image" content="https://whois.mrrobot.app/img/whois.png" />
     <meta name="theme-color" content="#F1B451">
-    <% if (user) {%>
-    <meta name="description" content=" 🔧 ID <%= user.id %> \n✌ Pseudo <%= user.username %> \n#️⃣ Discriminateur #<%= user.discriminator %> \n🤖 Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %> \n⏱ Nombre de jour <%= checkDays(user.createdAt) %> jours" />
-    <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-    <meta name="theme-color" content="#7289da">
-    <% } %>
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- JS -->
