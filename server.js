@@ -62,7 +62,6 @@ app.get("/:userID", async (req, res) => {
     });
 });
 
-
 // handle invalid routes/methods
 app.all("*", (req, res) => {
     return res.render("404");

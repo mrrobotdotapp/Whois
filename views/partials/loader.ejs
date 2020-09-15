@@ -5,6 +5,12 @@
         <div class="bounce3"></div>
     </div>
 </div>
+<style>
+    .hidden {
+        display: none;
+        position: unset;
+    }
+</style>
 <script>
     document.oncontextmenu = () => {
         return false;
@@ -15,7 +21,7 @@
     document.body.style.overflowY = "hidden";
     document.body.style.overflowX = "hidden";
     window.onload = () => {
-        $("#loaderarea").remove();
+        document.getElementById("loaderarea").classList.add('hidden')
         document.body.style.overflowY = "";
         document.body.style.overflowX = "hidden";
         document.oncontextmenu = () => {

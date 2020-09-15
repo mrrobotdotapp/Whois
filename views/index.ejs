@@ -1,6 +1,24 @@
 <%- include("./partials/header.ejs") %>
-<%- include("./partials/loader.ejs") %>
+    <title>Mr. Robøt — Whois sur Discord</title>
+    <meta name="description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !">
+    <meta name="theme-color" content="#F1B451">
 
+    <meta property="og:site_name" content="Obtenez votre fiche d'information" />
+    <meta name="twitter:title" content="Mr. Robøt — Whois sur Discord" />
+    <meta name="twitter:description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !" />
+    <meta name="twitter:image" content="https://whois.mrrobot.app/img/whois.png" />
+</head>
+<body>
+<div class="container">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="/">
+                <img src="/img/whois.png" width="30" height="30" class="d-inline-block align-top" alt="Mr. Robot logo" loading="lazy" style="margin: 0 3px;">
+                Mr. Robøt — Whois
+            </a>
+        </div>
+    </nav>
+</div>
 <div class="container">
     <div class="card bg-dark text-white mt-5 shadow-sm">
             <% if (error) { %>
@@ -29,6 +47,8 @@
             </div>
     </div>
 </div>
+<%- include("./partials/footer.ejs") %>
+<%- include("./partials/loader.ejs") %>
 <script type="text/javascript">
       var _paq = window._paq || [];
       _paq.push(["setDoNotTrack", true]);
@@ -41,11 +61,6 @@
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
-      // TODO : PWA not working. 
-      window.addEventListener('beforeinstallprompt', (event) => {
-          window.deferredPrompt = event
-          divInstall.classList.toggle('hidden', false)
-      })
       const cfcl='color:#314759; font-size: small; font-family: \'Open Sans\', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", sans-serif'
       console.group("Informations")
       console.log('%cHello friend.',cfcl)
