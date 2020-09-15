@@ -20,7 +20,7 @@
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⌛ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
+          ⌛ ・Nombre de jour <%= checkDays(user.createdAt) %>" />
     <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
     <meta property="og:site_name" content="ID : <%= user.id %> — Fiche d'information" />
     <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
@@ -30,7 +30,7 @@
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⌛ ・Nombre de jour <%= checkDays(user.createdAt) %> jours" />
+          ⌛ ・Nombre de jour <%= checkDays(user.createdAt) %>" />
     <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
     <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
 </head>
