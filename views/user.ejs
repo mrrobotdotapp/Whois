@@ -15,8 +15,7 @@
     %>
     <title><%= user.username %> — Whois sur Discord</title>
     <meta name="description"
-          content="
-          🧐 ・Pseudo <%= user.username %>
+          content="🧐 ・Pseudo <%= user.username %>
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
@@ -25,8 +24,7 @@
     <meta property="og:site_name" content="ID : <%= user.id %> — Fiche d'information" />
     <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
     <meta name="twitter:description"
-          content="
-          🧐 ・Pseudo <%= user.username %>
+          content="🧐 ・Pseudo <%= user.username %>
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
