@@ -89,10 +89,15 @@ input {
     color: #FFFFFF !important;
 }
 .usr_title {
-    font-size: 20px;
+    font-size: 23px;
+    padding: 9px 0 13px 0;
 }
 .notice_footer {
     margin-top: -30px !important;
+    margin-bottom: 15px;;
+    text-align: center;
+    font-size: 12.5px;
+    color: #6c757d;
 }
 .alert-danger {
     text-align: -webkit-center;
@@ -101,4 +106,10 @@ input {
     border-color: #d9534f;
     border-radius: unset;
     font-weight: 200;
+}
+@media (max-width: 900px) {
+    .row>* {
+        padding-right: unset;
+        padding-left: unset;
+    }
 }
