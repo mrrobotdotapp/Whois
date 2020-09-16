@@ -107,6 +107,9 @@ input {
     border-radius: unset;
     font-weight: 200;
 }
+.alert {
+    margin-bottom: -25px;
+}
 @media (max-width: 900px) {
     .row>* {
         padding-right: unset;
