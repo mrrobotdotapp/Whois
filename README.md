@@ -1,4 +1,4 @@
-# Discord.id
+# Whois
 
 Obtiens un peu toutes les informations concernant un compte Discord depuis son ID. *Marche aussi avec un token.*
 
