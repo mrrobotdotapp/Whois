@@ -1,36 +1,36 @@
 <%- include("./partials/header.ejs") %>
-    <%
-    function checkDays(date) {
-        let now = new Date()
-        let diff = now.getTime() - date.getTime()
-        let days = Math.floor(diff / 86400000)
-        return days + (days === 1 ? " jour" : " jours")
-    }
-    function generateBadge(verified = false) {
-        if (flags.length < 1) return;
-        if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
-        if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
-        return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
-    }
-    %>
-    <title><%= user.username %> — Whois sur Discord</title>
-    <meta name="description"
-          content="🧐 ・Pseudo <%= user.username %>
+<%
+function checkDays(date) {
+    let now = new Date()
+    let diff = now.getTime() - date.getTime()
+    let days = Math.floor(diff / 86400000)
+    return days + (days === 1 ? " jour" : " jours")
+}
+function generateBadge(verified = false) {
+    if (flags.length < 1) return;
+    if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
+    if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="rounded ml-2 botbadge-v" src="${flags.find(i => i.name === "Verified Bot").url}" data-toggle="tooltip" data-placement="top" title="Robot vérifié">`;
+    return `<img draggable="false" class="rounded ml-2 botbadge" src="${flags.find(i => i.name === "Bot").url}">`;
+}
+%>
+<title><%= user.username %> — Whois sur Discord</title>
+<meta name="description"
+      content="🧐 ・Pseudo <%= user.username %>
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⏲️ ・Nombre de jour <%= checkDays(user.createdAt) %>" />
-    <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-    <meta property="og:site_name" content="ID : <%= user.id %> — Fiche d'information" />
-    <meta name="twitter:title" content="Informations à propos de <%= user.username %>" />
-    <meta name="twitter:description"
-          content="🧐 ・Pseudo <%= user.username %>
+          ⏲️ ・Nombre de jour <%= checkDays(user.createdAt) %>"/>
+<meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
+<meta property="og:site_name" content="ID : <%= user.id %> — Fiche d'information"/>
+<meta name="twitter:title" content="Informations à propos de <%= user.username %>"/>
+<meta name="twitter:description"
+      content="🧐 ・Pseudo <%= user.username %>
           #️⃣ ・Discriminateur #<%= user.discriminator %>
           🤖 ・Est-il/elle un robot ? <%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %>
           📆 ・ Créé le <%= moment(user.createdAt).format('dddd LL à LT') %>
-          ⏲️ ・Nombre de jour <%= checkDays(user.createdAt) %>" />
-    <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" />
-    <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
+          ⏲️ ・Nombre de jour <%= checkDays(user.createdAt) %>"/>
+<meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
+<meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
 </head>
 <%- include("./partials/loader.ejs") %>
 
@@ -39,7 +39,8 @@
     <nav class="navbar">
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="/">
-                <img src="/img/whois.png" width="30" height="30" class="d-inline-block align-top" alt="Mr. Robot logo" loading="lazy" style="margin: 0 3px;">
+                <img src="/img/whois.png" width="30" height="30" class="d-inline-block align-top" alt="Mr. Robot logo"
+                     loading="lazy" style="margin: 0 3px;">
                 Mr. Robøt — Whois
             </a>
         </div>
@@ -47,39 +48,45 @@
 </div>
 
 <div class="container">
-    <div class="card-body bg-transparent bg-alpha-dark text-white mt-5 shadow-sm">
-        <button class="btn btn-discord-green rounded float-right" onclick="location.href='/'">Accueil</button>
+    <div class="card-body bg_ctner_main text-white mt-5 shadow-sm">
         <div class="row">
             <div class="col-sm-2 avatar">
-                <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" draggable="false" class="rounded float-left avatar" alt="avatar">
+                <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" draggable="false"
+                     class="rounded float-left avatar" alt="avatar">
             </div>
             <div class="col-sm-1"></div>
             <div class="col-sm">
-                <h1 class="username"><%= user.username.substr(0,32) %><small class="text-muted discriminator">#<%= user.discriminator %></small>
+                <h1 class="username"><%= user.username.substr(0, 32) %><small
+                            class="discriminator">#<%= user.discriminator %></small>
                     <%- user.bot ? (user.bot && user.verified) ? generateBadge(true) : generateBadge() : "" %>
-                <% 
-                flags.forEach(badge => { 
-                    if (badge.name === "Bot" || badge.name === "Verified Bot") return;
+                    <%
+                    flags.forEach(badge => {
+                    if (badge.name === "Bot" || badge.name === "Verified Bot") return
                     else {
-                %>
-                <img class="img-fluid badges" draggable="false" src="<%= badge.url %>" data-toggle="tooltip" data-placement="top" title="<%= badge.name %>" alt="<%= badge.name %> Badge">
-                <% }}) %></h1>
+                    %>
+                        <div class="white_circle">
+                            <img class="img-fluid badges" draggable="false" src="<%= badge.url %>"
+                                 title="<%= badge.name %>"
+                                 alt="<%= badge.name %> Badge">
+                        </div>
+
+                    <% }}) %>
+                </h1>
                 <hr class="bg-transparent my-4">
                 <h5>🔧 ・ ID <span class="inf_colored"><%= user.id %></span></h5>
                 <h5>🧐 ・ Pseudo <span class="inf_colored"><%= user.username %></span></h5>
                 <h5>#️⃣ ・ Discriminateur <span class="inf_colored">#<%= user.discriminator %></span></h5>
-                <h5>🤖 ・ Est-il/elle un robot ? <span class="inf_colored"><%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %></span></h5>
-                <h5>📆 ・ Créé le <span class="inf_colored" data-toggle="tooltip" data-placement="bottom" title="Heure locale"><%= moment(user.createdAt).format('dddd LL à LT') %></span></h5>
+                <h5>🤖 ・ Est-il/elle un robot ? <span
+                            class="inf_colored"><%= user.bot ? "Oui " : "Non" %><%= user.verified ? " et verifié. ✔" : "" %></span>
+                </h5>
+                <h5>📆 ・ Créé le <span class="inf_colored" data-toggle="tooltip" data-placement="bottom"
+                                       title="Heure locale"><%= moment(user.createdAt).format('dddd LL à LT') %></span>
+                </h5>
                 <h5>⏲️ ・ Nombre de jour <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h5>
             </div>
         </div>
     </div>
 </div>
 <%- include("./partials/footer.ejs") %>
-<script>
-    $(".badges").tooltip();
-    $(".botbadge").tooltip();
-    $(".botbadge-v").tooltip();
-</script>
 </body>
 </html>
