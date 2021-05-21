@@ -4,10 +4,8 @@
 :root {
     --discord-dark: #2C2F33;
     --alpha-dark: #23272A;
-    --blurple: #7289DA;
-    --dark-blurple: #4D5E94;
-    --discord-green: #43B581;
-    --discord-green-d: #31a06e;
+    --blurple: #5865F2;
+    --dark-blurple: #4753c2;
 }
 ::-webkit-scrollbar { width: 3px;}
 ::-webkit-scrollbar-track {background: none !important;}
@@ -21,13 +19,14 @@ body {
     color: #FFF;
 }
 a {
+    color: var(--bs-white);
     transition-duration: .2s;
     text-decoration: none;
 }
 a:hover,
 a:focus {
     transition-duration: .5s;
-    color: var(--blurple) !important;
+    color: #b3b3b3;
 }
 h1,
 h5 {
@@ -52,41 +51,42 @@ h5 {
     height: 23px;
 }
 .inf_colored {
-    color: var(--blurple);
+    color: var(--alpha-dark);
     font-family: system-ui, sans-serif;
+}
+.discriminator {
+    color: #d8d8d8;
+}
+.white_circle {
+    display: inline-flex;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
 }
 .required {
     color: #d9534f;
     cursor: pointer;
 }
 input {
-    background-color: var(--alpha-dark) !important;
-    color: #FFFFFF !important;
-    border: none !important;
+    background-color: var(--alpha-dark);
+    color: #FFFFFF;
+    border: none;
 }
-.btn-blurple {
-    background-color: var(--blurple) !important;
-    color: #FFFFFF !important;
-}
-.btn-blurple:hover {
-    background-color: var(--dark-blurple) !important;
-    color: #b9b9b9 !important;
-}
-.bghr {
-    background-color: rgba(255,255,255,0.3) !important;
-    height: 1px !important;
-}
-.bg-alpha-dark {
-    background-color: var(--alpha-dark) !important;
+.btn_blurple {
+    background-color: var(--dark-blurple);
     color: #FFFFFF;
 }
-.btn-discord-green {
-    background-color: var(--discord-green) !important;
-    color: #FFFFFF !important;
+.btn_blurple:hover {
+    background-color: #3a429e;
+    color: #b9b9b9;
 }
-.btn-discord-green:hover {
-    background-color: var(--discord-green-d) !important;
-    color: #FFFFFF !important;
+.bghr {
+    background-color: rgba(255,255,255,0.3);
+    height: 1px;
+}
+.bg_ctner_main {
+    background-color: var(--blurple);
+    color: #FFFFFF;
 }
 .usr_title {
     font-size: 23px;
@@ -96,8 +96,7 @@ input {
     margin-top: -30px !important;
     margin-bottom: 15px;;
     text-align: center;
-    font-size: 12.5px;
-    color: #6c757d;
+    font-size: 13px;
 }
 .alert-danger {
     text-align: -webkit-center;
