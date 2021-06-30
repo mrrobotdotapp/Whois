@@ -9,10 +9,10 @@ const moment = require('moment')
 moment.locale('fr')
 
 client.on("ready", () => {
-    client.user.setStatus("invisible")
+    client.user.setStatus("invisible").then(r => r)
 })
 
-client.login(config.TOKEN)
+client.login(config.TOKEN).then(r => r)
 
 app.set("view engine", "ejs")
 app.use(express.static("public"))
@@ -65,12 +65,5 @@ app.listen(PORT, () => {
 
 
 function getID(source) {
-    const tokenRegex = /([MN][A-Za-z\d]{23})\.([\w-]{6})\.([\w-]{27})/
-    const isToken = tokenRegex.test(source)
-    if (isToken) {
-        const base64 = source.split(".")[0]
-        const id = Buffer.from(base64, 'base64').toString()
-        return id
-    }
     return source
 }
