@@ -1,14 +1,23 @@
 <%- include("./partials/header.ejs"); %>
 <%- include("./partials/loader.ejs"); %>
-
+<style>
+    body {
+        background-color: #d9534f;
+    }
+</style>
 
 </head>
 <body>
-<div class="container">
-    <div class="d-flex justify-content-center align-items-center">
-        <button class="btn btn-danger rounded" style="width: 100px !important;" onclick="location.href='/'">Return to
-            home.
-        </button>
+<div class="ctner space_x">
+    <div class="row">
+        <div class="bg_ctner_main">
+            <h2>Hmmm you've got an error. — 404 err</h2>
+            <p>Use an ID, not your pseudonym.</p>
+            <p>Would you like a example? <a href="/308655472452304896">Click here</a>.</p>
+            <button class="btn_blurple" onclick="location.href='/'">Return to
+                home.
+            </button>
+        </div>
     </div>
 </div>
 </body>
