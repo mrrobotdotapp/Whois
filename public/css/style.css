@@ -1,117 +1,201 @@
-@import url("/css/bootstrap.min.css");
 @import url("/css/loader.css");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu&display=swap);
+
 :root {
+    --font-family: 'Ubuntu', sans-serif;
     --discord-dark: #2C2F33;
     --alpha-dark: #23272A;
     --blurple: #5865F2;
     --dark-blurple: #4753c2;
+    --whois-color: #8A59AA;
 }
-::-webkit-scrollbar { width: 3px;}
-::-webkit-scrollbar-track {background: none !important;}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: none !important;
+}
+
 ::-webkit-scrollbar-thumb {
     background: var(--alpha-dark);
     border-radius: 15px;
 }
+
 body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: var(--discord-dark);
+    font-family: var(--font-family);
+    background-color: var(--whois-color);
     color: #FFF;
+    background-image: url(/img/board.png);
+    background-repeat: repeat;
 }
+
 a {
     color: var(--bs-white);
     transition-duration: .2s;
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     transition-duration: .5s;
     color: #b3b3b3;
 }
+
 h1,
 h5 {
     word-break: break-word;
 }
+
 .avatar {
     height: 140px;
     width: 140px;
     border-radius: 50% !important;
 }
+
 .username {
     margin-top: 25px;
 }
+
 .badges {
     max-width: 35px;
-    cursor: pointer;
 }
+
 .botbadge {
     height: 23px;
 }
+
 .botbadge-v {
     height: 23px;
 }
+
 .inf_colored {
     color: var(--alpha-dark);
     font-family: system-ui, sans-serif;
 }
+
 .discriminator {
     color: #d8d8d8;
 }
+
 .white_circle {
     display: inline-flex;
     background-color: white;
     border-radius: 50%;
     padding: 10px;
 }
-.required {
-    color: #d9534f;
-    cursor: pointer;
-}
-input {
-    background-color: var(--alpha-dark);
-    color: #FFFFFF;
-    border: none;
-}
+
 .btn_blurple {
     background-color: var(--dark-blurple);
     color: #FFFFFF;
 }
+
 .btn_blurple:hover {
     background-color: #3a429e;
     color: #b9b9b9;
 }
-.bghr {
-    background-color: rgba(255,255,255,0.3);
-    height: 1px;
-}
+
 .bg_ctner_main {
     background-color: var(--blurple);
     color: #FFFFFF;
+    border-radius: 7px;
+    box-shadow: #23272a9e 2px 2px 3px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 5rem 10% 5rem 10%;
 }
+
 .usr_title {
     font-size: 23px;
     padding: 9px 0 13px 0;
 }
-.notice_footer {
-    margin-top: -30px !important;
-    margin-bottom: 15px;;
-    text-align: center;
-    font-size: 13px;
+
+.footer {
+    font-size: 15px;
+    color: #f3f3f3;
+    line-break: auto;
+    line-height: 1.6rem;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    margin-bottom: 1rem;
 }
+
 .alert-danger {
-    text-align: -webkit-center;
     color: #fdfcfc;
     background-color: #d9534f;
-    border-color: #d9534f;
-    border-radius: unset;
-    font-weight: 200;
+    padding: 14px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -4px;
 }
-.alert {
-    margin-bottom: -25px;
+
+.space_x {
+    margin-top: 15%;
 }
+
+.ctner {
+    padding: 0 5%;
+}
+
 @media (max-width: 900px) {
-    .row>* {
-        padding-right: unset;
-        padding-left: unset;
+    .ctner {
+        padding: 0 2%;
     }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 12px 10px 12px 10px;
+}
+
+@media (max-width: 1200px) {
+    .col {
+        flex-basis: unset;
+    }
+}
+
+button, input {
+    width: -webkit-fill-available;
+    padding: unset;
+    border-radius: 5px;
+}
+
+input {
+    background-color: #fff;
+    color: #494949;
+    border: none;
+    padding: 20px 5%;
+    outline: unset;
+}
+
+button {
+    font-size: 1.4rem;
+    padding: 20px 0;
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: var(--font-family);
+    box-shadow: #3a429e 1px 1px 1px;
+    border-color: transparent;
+    transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
+
+}
+button:hover,
+button:focus {
+    box-shadow: #3a429e 0 0 0;
+}
+
+form {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
 }
