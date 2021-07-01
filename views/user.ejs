@@ -58,7 +58,7 @@ function UrlInviteThisBot() {
             <div class="row user_main_inf">
                 <div class="col">
                     <a href="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" target="_blank" rel="noopener">
-                    <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"
+                    <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 128 }) %>"
                          draggable="false"
                          class="rounded avatar" alt="avatar">
                     </a>
@@ -81,20 +81,20 @@ function UrlInviteThisBot() {
                                        title="Local time"><%= moment(user.createdAt).format('dddd LL LT') %></span>
                 </h3>
                 <h3>⏲️ ・ Number of days <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h3>
-                <%- user.bot ? UrlInviteThisBot() : "" %>
                 <div class="ive_got_badges">
                     <%
                     flags.forEach(badge => {
                     if (badge.name === "Bot" || badge.name === "Verified Bot") return
                     else {
                     %>
-                    <div class="white_circle">
-                        <img class="badges" draggable="false" src="<%= badge.url %>"
-                             title="<%= badge.name %>"
-                             alt="<%= badge.name %> Badge">
-                    </div>
+                        <div class="white_circle">
+                            <img class="badges" draggable="false" src="<%= badge.url %>"
+                                 title="<%= badge.name %>"
+                                 alt="<%= badge.name %> Badge">
+                        </div>
                     <% }}) %>
                 </div>
+                <%- user.bot ? UrlInviteThisBot() : "" %>
                 <div class="home_link">
                     <a href="/">← Return to the home page.</a>
                 </div>
