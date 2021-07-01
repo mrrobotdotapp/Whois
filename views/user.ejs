@@ -18,7 +18,7 @@ function UrlInviteThisBot() {
 %>
 <title>Whois on Discord — <%= user.username %></title>
 <meta name="description"
-      content="🧐 ・Pseudo <%= user.username %>
+      content="🧐 ・Username <%= user.username %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
           🤖 ・Is he/she a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
@@ -27,7 +27,7 @@ function UrlInviteThisBot() {
 <meta property="og:site_name" content="ID : <%= user.id %> — Information card"/>
 <meta name="twitter:title" content="Information about <%= user.username %>"/>
 <meta name="twitter:description"
-      content="🧐 ・Pseudo <%= user.username %>
+      content="🧐 ・Username <%= user.username %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
           🤖 ・ Is he/she a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
@@ -72,7 +72,7 @@ function UrlInviteThisBot() {
             </div>
             <div class="inf_box">
                 <h3>🔧 ・ ID <span class="inf_colored"><%= user.id %></span></h3>
-                <h3>🧐 ・ Pseudo <span class="inf_colored"><%= user.username %></span></h3>
+                <h3>🧐 ・ Username <span class="inf_colored"><%= user.username %></span></h3>
                 <h3>#️⃣ ・ Discriminator <span class="inf_colored">#<%= user.discriminator %></span></h3>
                 <h3>🤖 ・  Is he/she a bot ? <span
                             class="inf_colored"><%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %></span>
