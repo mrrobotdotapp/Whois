@@ -1,77 +1,79 @@
 <%- include("./partials/header.ejs") %>
-    <title>Mr. Robøt — Whois sur Discord</title>
-    <meta name="description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !">
-    <meta name="theme-color" content="#F1B451">
+<title>Whois on Discord — Mr. Robøt</title>
+<meta name="description"
+      content="Get information about Discord users and bots by ID">
+<meta name="theme-color" content="#F1B451">
 
-    <meta property="og:site_name" content="Obtenez votre fiche d'information" />
-    <meta name="twitter:title" content="Mr. Robøt — Whois sur Discord" />
-    <meta name="twitter:description" content="Obtenir des informations sur les utilisateurs et les robots de Discord par ID ou token !" />
-    <meta name="twitter:image" content="https://whois.mrrobot.app/img/whois.png" />
+<meta property="og:site_name" content="Get your information sheet"/>
+<meta name="twitter:title" content="Whois on Discord — Mr. Robøt"/>
+<meta name="twitter:description"
+      content="Get information about Discord users and bots by ID"/>
+<meta name="twitter:image" content="https://whois.mrrobot.app/img/whois.png"/>
 </head>
 <body>
-<div class="container">
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand text-light" href="/">
-                <img src="/img/whois.png" width="30" height="30" class="d-inline-block align-top" alt="Mr. Robot logo" loading="lazy" style="margin: 0 3px;">
-                Mr. Robøt — Whois
-            </a>
-        </div>
-    </nav>
+<div id="ConnectionState" class="hidden">
+    You are offline.
 </div>
-<div class="container">
+<div class="ctner space_x">
     <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-sm-6 card bg-dark text-white mt-5 shadow-sm">
-            <% if (error) { %>
-            <div class="alert alert-danger fade show" role="alert">
-                <%= error %>
+        <div class="bg_ctner_main">
+            <div class="title">
+                <h1>Whois</h1>
+                <h2>From 
+                    <a href="https://mrrobot.app" target="_blank" rel="noopener">
+                        Mr. Robøt
+                        <img src="img/mrrobot_rounded.webp" alt="Mr. Robot logo" class="img_mrrobot" draggable="false">
+                    </a>
+                </h2>
             </div>
-            <% } %>
-            <div class="my-4">
-                <form method="POST">
-                    <div class="card-body form-group">
-                        <div class="card-title">
-                            <label for="userid" class="usr_title">Identifiant de l'utilisateur <i class="required" data-placement="right" title="Requis">*</i></label>
-                        </div>
-                        <input type="text" class="form-control" id="userid" name="user" aria-describedby="help" autocomplete="off"  placeholder="Entrez l'ID de l'utilisateur ou le token Discord ici." autofocus required>
+            <form method="POST">
+                <label for="userid" class="usr_title">User ID</label>
+                <input type="text" id="userid" name="user"
+                       autocomplete="off" placeholder="Enter the user ID. Example : 308655472452304896"
+                       autofocus required>
+                <% if (error) { %>
+                    <div class="alert alert-danger">
+                        <%= error %>
                     </div>
-                    <div class="card-body">
-                        <button type="submit" class="btn btn-blurple rounded" style="width: 100% !important;">Submit</button>
-                    </div>
-                </form>
+                <% } %>
+                <button type="submit" class="btn_blurple">Get informations</button>
+            </form>
+            <div class="footer">
+                <p>
+                <a href="https://github.com/Mist3r-Robot/Whois" target="_blank">See on
+                    GitHub</a>
+                — <a href="https://mrrobot.app/add" target="_blank">Use the bot directly</a>
+                — Not affiliated with Discord Inc.
+                </p>
             </div>
-            <div class="notice_footer">
-                <p id="info" class="card-text">
-                    <a href="https://github.com/Mist3r-Robot/Whois" class="card-text text-muted" target="_blank">Voir sur GitHub</a>
-                    — <a href="https://mrrobot.app/add" class="card-text text-muted" target="_blank">Utiliser directement le robot</a>
-                    — <a href="https://github.com/ssoraa/discord.id" class="card-text text-muted" target="_blank">Dépôt initial</a>
-                    — Non affilié à Discord, Inc.</p>
-            </div>
+        </div>
     </div>
-    <div class="col-sm"></div>
 </div>
-</div>
-<%- include("./partials/footer.ejs") %>
 <%- include("./partials/loader.ejs") %>
+<%- include("./partials/footer.ejs") %>
 <script type="text/javascript">
-      var _paq = window._paq || [];
-      _paq.push(["setDoNotTrack", true]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//analytics.thomasbnt.fr/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
+    var _paq = window._paq || [];
+    _paq.push(["setDoNotTrack", true]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+        var u = "//analytics.thomasbnt.dev/";
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
         _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-      const cfcl='color:#314759; font-size: small; font-family: \'Open Sans\', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", sans-serif'
-      console.group("Informations")
-      console.log('%cHello friend.',cfcl)
-      console.log('%cFollow moi sur GitHub pour les projets Open Source : https://github.com/thomasbnt',cfcl)
-      console.groupEnd("Informations")
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+    })();
+    const cfcl = 'color:#314759; font-size: small; font-family: \'Open Sans\', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", sans-serif'
+    console.group("Informations")
+    console.log('%cHello friend.', cfcl)
+    console.log('%cFollow me on GitHub : https://github.com/thomasbnt', cfcl)
+    console.log('%cStar the project : https://github.com/Mist3r-Robot/Whois', cfcl)
+    console.groupEnd("Informations")
 </script>
-<noscript><p><img src="//analytics.thomasbnt.fr/matomo.php?idsite=1&rec=1" style="border:0;" alt=""/></p></noscript>
+<noscript><p><img src="//analytics.thomasbnt.dev/matomo.php?idsite=1&rec=1" style="border:0;" alt=""/></p></noscript>
 </body>
 </html>

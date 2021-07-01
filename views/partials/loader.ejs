@@ -1,34 +1,39 @@
-<div id="loaderarea">
-    <div class="page_spinner d-flex flex-row justify-content-center align-items-center">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-</div>
 <style>
+    .x {
+        justify-content: center;
+        align-self: center;
+        z-index: 100;
+    }
     .hidden {
         display: none;
         position: unset;
     }
 </style>
+<div id="loaderarea">
+    <div class="x">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+</div>
 <script>
     document.oncontextmenu = () => {
-        return false;
+        return false
     }
     document.onselectstart = () => {
-        return false;
+        return false
     }
-    document.body.style.overflowY = "hidden";
-    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = "hidden"
+    document.body.style.overflowX = "hidden"
     window.onload = () => {
         document.getElementById("loaderarea").classList.add('hidden')
-        document.body.style.overflowY = "";
-        document.body.style.overflowX = "hidden";
+        document.body.style.overflowY = ""
+        document.body.style.overflowX = "hidden"
         document.oncontextmenu = () => {
-            return true;
+            return true
         }
         document.onselectstart = () => {
-            return true;
+            return true
         }
     }
 </script>

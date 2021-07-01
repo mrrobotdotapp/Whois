@@ -1,21 +1,21 @@
 {
-  "name": "discord.id",
-  "version": "1.0.0",
+  "name": "whois",
+  "version": "2.0.0",
   "description": "Get any Discord user/bot informations by ID !",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssoraa/discord.id.git"
+    "url": "git+https://github.com/Mist3r-Robot/Whois.git"
   },
-  "author": "Sora (CasperCarder)",
+  "author": "Thomas Bnt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ssoraa/discord.id/issues"
+    "url": "https://github.com/Mist3r-Robot/Whois/issues"
   },
-  "homepage": "https://github.com/ssoraa/discord.id#readme",
+  "homepage": "https://github.com/Mist3r-Robot/Whois#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
     "ejs": "^3.1.3",

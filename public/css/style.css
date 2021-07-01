@@ -1,118 +1,282 @@
-@import url("/css/bootstrap.min.css");
 @import url("/css/loader.css");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu&display=swap);
+
 :root {
+    --font-family: 'Ubuntu', sans-serif;
     --discord-dark: #2C2F33;
     --alpha-dark: #23272A;
-    --blurple: #7289DA;
-    --dark-blurple: #4D5E94;
-    --discord-green: #43B581;
-    --discord-green-d: #31a06e;
+    --blurple: #5865F2;
+    --dark-blurple: #4753c2;
+    --red: #d9534f;
 }
-::-webkit-scrollbar { width: 3px;}
-::-webkit-scrollbar-track {background: none !important;}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: none !important;
+}
+
 ::-webkit-scrollbar-thumb {
     background: var(--alpha-dark);
     border-radius: 15px;
 }
+
 body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: var(--discord-dark);
+    font-family: var(--font-family);
+    background-color: var(--blurple);
     color: #FFF;
+    padding: 0;
+    margin: 0;
 }
+
 a {
+    color: white;
     transition-duration: .2s;
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     transition-duration: .5s;
-    color: var(--blurple) !important;
+    color: #d9d9d9;
 }
-h1,
-h5 {
+
+.title {
+    user-select: none;
+    margin-bottom: 3rem;
+    word-break: break-word;
+    text-align: center;
+}
+.img_mrrobot {
+    width: 1.2rem;
+}
+h1 {
+    font-size: 4.5rem;
+    margin: unset;
     word-break: break-word;
 }
+
+h2 {
+    font-weight: 100;
+    margin: unset;
+
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.logo {
+    padding-left: 1rem;
+    user-select: none;
+    width: 120px;
+}
+
 .avatar {
     height: 140px;
     width: 140px;
-    border-radius: 50% !important;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
 }
-.username {
-    margin-top: 25px;
+
+.avatar:hover,
+.avatar:focus {
+    box-shadow: #3a429e 1px 1px 1px;
 }
+
+.rounded {
+    border-radius: 50%;
+}
+
+.ive_got_badges {
+    text-align: right;
+    padding-bottom: 2rem;
+
+}
+
 .badges {
     max-width: 35px;
-    cursor: pointer;
 }
-.botbadge {
-    height: 23px;
+
+.botbadge, .botbadge-v {
+    height: 2rem;
 }
-.botbadge-v {
-    height: 23px;
+
+.inf_box {
+    padding-top: 1rem;
 }
+
+.user_main_inf {
+    align-items: center;
+    display: inline-flex;
+}
+
 .inf_colored {
-    color: var(--blurple);
+    color: white;
     font-family: system-ui, sans-serif;
+    background-color: var(--dark-blurple);
+    -webkit-box-decoration-break: clone;
+    border-radius: 25px;
+    padding: 0 8px;
 }
-.required {
-    color: #d9534f;
-    cursor: pointer;
+
+.discriminator {
+    color: #d8d8d8;
 }
-input {
-    background-color: var(--alpha-dark) !important;
-    color: #FFFFFF !important;
-    border: none !important;
+
+.white_circle {
+    display: inline-flex;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
 }
-.btn-blurple {
-    background-color: var(--blurple) !important;
-    color: #FFFFFF !important;
-}
-.btn-blurple:hover {
-    background-color: var(--dark-blurple) !important;
-    color: #b9b9b9 !important;
-}
-.bghr {
-    background-color: rgba(255,255,255,0.3) !important;
-    height: 1px !important;
-}
-.bg-alpha-dark {
-    background-color: var(--alpha-dark) !important;
+
+.btn_blurple {
+    background-color: var(--dark-blurple);
     color: #FFFFFF;
 }
-.btn-discord-green {
-    background-color: var(--discord-green) !important;
-    color: #FFFFFF !important;
+
+.btn_blurple:hover {
+    background-color: #3a429e;
+    color: #b9b9b9;
 }
-.btn-discord-green:hover {
-    background-color: var(--discord-green-d) !important;
-    color: #FFFFFF !important;
+
+.bg_ctner_main {
+    background-color: transparent;
+    color: #FFFFFF;
+    border-radius: 7px;
+    /*box-shadow: #23272a9e 2px 2px 3px;*/
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 5rem 10% 0 10%;
 }
+
 .usr_title {
     font-size: 23px;
     padding: 9px 0 13px 0;
 }
-.notice_footer {
-    margin-top: -30px !important;
-    margin-bottom: 15px;;
+
+.footer {
+    font-size: 17px;
+    color: #f3f3f3;
+    line-break: auto;
+    line-height: 1.6rem;
+    padding-top: 1.8rem;
     text-align: center;
-    font-size: 12.5px;
-    color: #6c757d;
+    flex-direction: column;
+    display: flex;
 }
+#installContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem 2rem;
+    cursor: pointer;
+}
+#installContainer > #InstallPWA > img {
+    width: 3rem;
+}
+.home_link {
+    text-align: center;
+    padding-top: 2.3rem;
+    font-size: 17px;
+    font-family: var(--font-family);
+}
+
 .alert-danger {
-    text-align: -webkit-center;
     color: #fdfcfc;
-    background-color: #d9534f;
-    border-color: #d9534f;
-    border-radius: unset;
-    font-weight: 200;
+    background-color: var(--red);
+    padding: 14px;
+    border-radius: 0 0 5px 5px;
+    margin-top: -1rem;
 }
-.alert {
-    margin-bottom: -25px;
+
+.space_x {
+    margin-top: 4vh;
 }
+
+.ctner {
+    padding: 0 5% 3rem 5%;
+}
+
 @media (max-width: 900px) {
-    .row>* {
-        padding-right: unset;
-        padding-left: unset;
+    .bg_ctner_main {
+        padding: 1rem 2% 5rem 2%;
     }
+
+    .ctner {
+        padding: 0 0;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 12px 10px 12px 10px;
+}
+
+@media (max-width: 1200px) {
+    .col {
+        flex-basis: unset;
+    }
+}
+
+.btn, button, input {
+    width: -webkit-fill-available;
+    display: inline-block;
+    padding: unset;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.btn, button {
+    text-align: center;
+}
+
+input {
+    background-color: #fff;
+    color: #494949;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
+    border: none;
+    padding: 20px 5%;
+    outline: unset;
+}
+.btn,
+button {
+    font-size: 1.4rem;
+    padding: 1.6rem 0 1.6rem .7rem;
+    align-items: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: var(--font-family);
+    box-shadow: #2f2f2f94 2px 2px 4px;
+    border-color: transparent;
+    transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
+
+}
+
+button:hover,
+button:focus {
+    box-shadow: #3a429e 0 0 0;
+}
+
+form {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+#ConnectionState {
+    background-color: var(--red);
+    color: white;
+    padding: 1rem 5%;
 }

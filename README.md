@@ -1,18 +1,26 @@
 # Whois
 
-Obtiens un peu toutes les informations concernant un compte Discord depuis son ID. *Marche aussi avec un token.*
+Get information about Discord users and bots by ID.
+
+# Advantages
+- Get informations like ID, Username, Discriminator, if it is a bot, created at, total numbers since created.
+- If it is a bot, you can directly add the bot from this page.
+- PWA ready !
+- Good Performance and accessibility.
+- Nice blurple.
 
 # Preview
 
-![image](https://user-images.githubusercontent.com/14293805/92952935-19330300-f461-11ea-93d5-024399415eb2.png)
+![Preview of the home page](https://i.thomasbnt.dev/i/fqz7v.png)
+![Preview of a profile](https://i.thomasbnt.dev/i/5u80m.png)
 
-# Comment l'installer ?
+# How to install it?
 
-Renommez `config.example.js` to `config.js` et remplissez-le.
+Rename `config.example.js` to `config.js` and fill it in.
 
 
 # Licence
 
-Le code source est public est sous [AGPL-3.0 License](LICENSE). Cependant le logo <img src="https://whois.mrrobot.app/img/whois.png" width="20"> ne l'est pas.
+The source code is public is under [AGPL-3.0 License](LICENSE). However the logo <img src="https://whois.mrrobot.app/img/whois.png" width="20"> is not.
 
 [![Badge forked from](https://img.shields.io/badge/Forked-from%20ssoraa%2Fdiscord.id-black?logo=GitHub&style=for-the-badge)](https://github.com/ssoraa/discord.id)
