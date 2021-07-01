@@ -1,8 +1,13 @@
-<%- include("./partials/header.ejs"); %>
+<%- include("./partials/header_404.ejs"); %>
 <%- include("./partials/loader.ejs"); %>
+<%- include("./partials/footer.ejs"); %>
+<title>Err 404 — Whois on Discord</title>
 <style>
     body {
         background-color: #d9534f;
+    }
+    h1, h2 {
+        padding-bottom: 2rem;
     }
 </style>
 
@@ -11,10 +16,12 @@
 <div class="ctner space_x">
     <div class="row">
         <div class="bg_ctner_main">
-            <h2>Hmmm you've got an error. — 404 err</h2>
-            <p>Use an ID, not your pseudonym.</p>
-            <p>Would you like a example? <a href="/308655472452304896">Click here</a>.</p>
-            <button class="btn_blurple" onclick="location.href='/'">Return to
+            <h1>Hmmm you've got an error.</h1>
+            <h2>
+                404 err — Use an ID, not your pseudonym. Would you like a example?
+                <a href="/308655472452304896">Click here</a>.
+            </h2>
+            <button class="btn" onclick="location.href='/'">Return to
                 home.
             </button>
         </div>

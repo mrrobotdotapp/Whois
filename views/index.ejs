@@ -1,19 +1,31 @@
 <%- include("./partials/header.ejs") %>
-<title>Mr. Robøt — Whois on Discord</title>
+<title>Whois on Discord — Mr. Robøt</title>
 <meta name="description"
       content="Get information about Discord users and bots by ID">
 <meta name="theme-color" content="#F1B451">
 
 <meta property="og:site_name" content="Get your information sheet"/>
-<meta name="twitter:title" content="Mr. Robøt — Whois on Discord"/>
+<meta name="twitter:title" content="Whois on Discord — Mr. Robøt"/>
 <meta name="twitter:description"
       content="Get information about Discord users and bots by ID"/>
 <meta name="twitter:image" content="https://whois.mrrobot.app/img/whois.png"/>
 </head>
 <body>
+<div id="ConnectionState" class="hidden">
+    You are offline.
+</div>
 <div class="ctner space_x">
     <div class="row">
         <div class="bg_ctner_main">
+            <div class="title">
+                <h1>Whois</h1>
+                <h2>From 
+                    <a href="https://mrrobot.app" target="_blank" rel="noopener">
+                        Mr. Robøt
+                        <img src="img/mrrobot_rounded.png" alt="Mr. Robot logo" class="img_mrrobot" draggable="false">
+                    </a>
+                </h2>
+            </div>
             <form method="POST">
                 <label for="userid" class="usr_title">User ID</label>
                 <input type="text" id="userid" name="user"
@@ -24,21 +36,21 @@
                         <%= error %>
                     </div>
                 <% } %>
-                <button type="submit" class="btn_blurple">Get informations
-                </button>
+                <button type="submit" class="btn_blurple">Get informations</button>
             </form>
+            <div class="footer">
+                <p>
+                <a href="https://github.com/Mist3r-Robot/Whois" target="_blank">See on
+                    GitHub</a>
+                — <a href="https://mrrobot.app/add" target="_blank">Use the bot directly</a>
+                — Not affiliated with Discord Inc.
+                </p>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <a href="https://github.com/Mist3r-Robot/Whois" target="_blank">See on
-            GitHub</a>
-        — <a href="https://mrrobot.app/add" target="_blank">Use the bot directly</a>
-        — <a href="https://github.com/eeskofr/discord.id" target="_blank">Initial
-            Repository</a>
-        — Not affiliated with Discord Inc.</div>
 </div>
-<%- include("./partials/footer.ejs") %>
 <%- include("./partials/loader.ejs") %>
+<%- include("./partials/footer.ejs") %>
 <script type="text/javascript">
     var _paq = window._paq || [];
     _paq.push(["setDoNotTrack", true]);
@@ -59,6 +71,7 @@
     console.group("Informations")
     console.log('%cHello friend.', cfcl)
     console.log('%cFollow me on GitHub : https://github.com/thomasbnt', cfcl)
+    console.log('%cStar the project : https://github.com/Mist3r-Robot/Whois', cfcl)
     console.groupEnd("Informations")
 </script>
 <noscript><p><img src="//analytics.thomasbnt.dev/matomo.php?idsite=1&rec=1" style="border:0;" alt=""/></p></noscript>

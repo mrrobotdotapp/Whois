@@ -7,7 +7,7 @@
     --alpha-dark: #23272A;
     --blurple: #5865F2;
     --dark-blurple: #4753c2;
-    --whois-color: #8A59AA;
+    --red: #d9534f;
 }
 
 ::-webkit-scrollbar {
@@ -25,14 +25,14 @@
 
 body {
     font-family: var(--font-family);
-    background-color: var(--whois-color);
+    background-color: var(--blurple);
     color: #FFF;
-    background-image: url(/img/board.png);
-    background-repeat: repeat;
+    padding: 0;
+    margin: 0;
 }
 
 a {
-    color: var(--bs-white);
+    color: white;
     transition-duration: .2s;
     text-decoration: none;
 }
@@ -40,39 +40,87 @@ a {
 a:hover,
 a:focus {
     transition-duration: .5s;
-    color: #b3b3b3;
+    color: #d9d9d9;
 }
 
-h1,
-h5 {
+.title {
+    user-select: none;
+    margin-bottom: 3rem;
     word-break: break-word;
+    text-align: center;
+}
+.img_mrrobot {
+    width: 1.2rem;
+}
+h1 {
+    font-size: 4.5rem;
+    margin: unset;
+    word-break: break-word;
+}
+
+h2 {
+    font-weight: 100;
+    margin: unset;
+
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.logo {
+    padding-left: 1rem;
+    user-select: none;
+    width: 120px;
 }
 
 .avatar {
     height: 140px;
     width: 140px;
-    border-radius: 50% !important;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
 }
 
-.username {
-    margin-top: 25px;
+.avatar:hover,
+.avatar:focus {
+    box-shadow: #3a429e 1px 1px 1px;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.ive_got_badges {
+    text-align: right;
+
 }
 
 .badges {
     max-width: 35px;
 }
 
-.botbadge {
-    height: 23px;
+.botbadge, .botbadge-v {
+    height: 2rem;
 }
 
-.botbadge-v {
-    height: 23px;
+.inf_box {
+    padding-top: 1rem;
+}
+
+.user_main_inf {
+    align-items: center;
+    display: inline-flex;
 }
 
 .inf_colored {
-    color: var(--alpha-dark);
+    color: white;
     font-family: system-ui, sans-serif;
+    background-color: var(--dark-blurple);
+    -webkit-box-decoration-break: clone;
+    border-radius: 25px;
+    padding: 0 8px;
 }
 
 .discriminator {
@@ -97,10 +145,10 @@ h5 {
 }
 
 .bg_ctner_main {
-    background-color: var(--blurple);
+    background-color: transparent;
     color: #FFFFFF;
     border-radius: 7px;
-    box-shadow: #23272a9e 2px 2px 3px;
+    /*box-shadow: #23272a9e 2px 2px 3px;*/
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
@@ -113,35 +161,55 @@ h5 {
 }
 
 .footer {
-    font-size: 15px;
+    font-size: 17px;
     color: #f3f3f3;
     line-break: auto;
     line-height: 1.6rem;
-    position: fixed;
+    padding-top: 1.8rem;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+#installContainer {
+    position: absolute;
     bottom: 0;
-    align-items: center;
-    margin-bottom: 1rem;
+    right: 0;
+    margin: 1rem 2rem;
+    cursor: pointer;
+}
+#installContainer > #InstallPWA > img {
+    width: 3rem;
+}
+.home_link {
+    text-align: center;
+    padding-top: 2.3rem;
+    font-size: 17px;
+    font-family: var(--font-family);
 }
 
 .alert-danger {
     color: #fdfcfc;
-    background-color: #d9534f;
+    background-color: var(--red);
     padding: 14px;
     border-radius: 0 0 5px 5px;
-    margin-top: -4px;
+    margin-top: -1rem;
 }
 
 .space_x {
-    margin-top: 15%;
+    margin-top: 4vh;
 }
 
 .ctner {
-    padding: 0 5%;
+    padding: 0 5% 3rem 5%;
 }
 
 @media (max-width: 900px) {
+    .bg_ctner_main {
+        padding: 1rem 2% 5rem 2%;
+    }
+
     .ctner {
-        padding: 0 2%;
+        padding: 0 0;
     }
 }
 
@@ -151,7 +219,6 @@ h5 {
 }
 
 .col {
-    flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
     padding: 12px 10px 12px 10px;
@@ -163,32 +230,40 @@ h5 {
     }
 }
 
-button, input {
+.btn, button, input {
     width: -webkit-fill-available;
+    display: inline-block;
     padding: unset;
     border-radius: 5px;
+    margin: 5px 0;
+}
+.btn, button {
+    text-align: center;
 }
 
 input {
     background-color: #fff;
     color: #494949;
+    font-family: var(--font-family);
+    font-size: 1.1rem;
     border: none;
     padding: 20px 5%;
     outline: unset;
 }
-
+.btn,
 button {
     font-size: 1.4rem;
-    padding: 20px 0;
+    padding: 1.6rem 0 1.6rem .7rem;
     align-items: center;
     margin-top: 1rem;
     cursor: pointer;
     font-family: var(--font-family);
-    box-shadow: #3a429e 1px 1px 1px;
+    box-shadow: #2f2f2f94 2px 2px 4px;
     border-color: transparent;
     transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
 
 }
+
 button:hover,
 button:focus {
     box-shadow: #3a429e 0 0 0;
@@ -198,4 +273,9 @@ form {
     display: flex;
     flex: auto;
     flex-direction: column;
+}
+#ConnectionState {
+    background-color: var(--red);
+    color: white;
+    padding: 1rem 5%;
 }
