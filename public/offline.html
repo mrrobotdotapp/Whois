@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Offline — Whois on Discord</title>
+  <style>
+
+    :root {
+      --font-family: 'Ubuntu', sans-serif;
+      --discord-dark: #2C2F33;
+      --alpha-dark: #23272A;
+      --blurple: #5865F2;
+      --dark-blurple: #4753c2;
+      --red: #d9534f;
+    }
+
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: none !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--alpha-dark);
+      border-radius: 15px;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--blurple);
+      color: #FFF;
+    }
+
+    a {
+      color: white;
+      transition-duration: .2s;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      transition-duration: .5s;
+      color: #d9d9d9;
+    }
+    h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 4.5rem;
+      margin: unset;
+      word-break: break-word;
+    }
+
+    h2 {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 100;
+      margin: unset;
+
+    }
+
+    .bg_ctner_main {
+      background-color: transparent;
+      color: #FFFFFF;
+      border-radius: 7px;
+      /*box-shadow: #23272a9e 2px 2px 3px;*/
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 5rem 10% 5rem 10%;
+    }
+
+
+    .footer {
+      font-size: 17px;
+      color: #f3f3f3;
+      line-break: auto;
+      line-height: 1.6rem;
+      padding-top: 1.8rem;
+      text-align: center;
+    }
+
+    .space_x {
+      margin-top: 4vh;
+    }
+
+    .ctner {
+      padding: 0 5% 3rem 5%;
+    }
+
+    @media (max-width: 900px) {
+      .bg_ctner_main {
+        padding: 1rem 2% 5rem 2%;
+      }
+
+      .ctner {
+        padding: 0 0;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col {
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 12px 10px 12px 10px;
+    }
+
+    @media (max-width: 1200px) {
+      .col {
+        flex-basis: unset;
+      }
+    }
+
+    .btn, button, input {
+      width: -webkit-fill-available;
+      display: inline-block;
+      padding: unset;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    .btn, button {
+      text-align: center;
+    }
+
+    .btn,
+    button {
+      font-size: 1.4rem;
+      padding: 1.6rem 0 1.6rem .7rem;
+      align-items: center;
+      margin-top: 1rem;
+      cursor: pointer;
+      font-family: var(--font-family);
+      box-shadow: #2f2f2f94 2px 2px 4px;
+      border-color: transparent;
+      transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
+
+    }
+
+    button:hover,
+    button:focus {
+      box-shadow: #3a429e 0 0 0;
+    }
+
+    body {
+      background-color: #d9534f;
+    }
+    h1, h2 {
+      padding-bottom: 2rem;
+    }
+  </style>
+
+</head>
+<body>
+<div class="ctner space_x">
+  <div class="row">
+    <div class="bg_ctner_main">
+      <h1>You are offline.</h1>
+      <h2>
+        Try again when you have a connection.
+      </h2>
+      <button class="btn" onclick="location.reload()">Reload
+      </button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
