@@ -20,7 +20,7 @@ function UrlInviteThisBot() {
 <meta name="description"
       content="🧐 ・Username <%= user.username %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
-          🤖 ・Is he/she a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
+          🤖 ・This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
 <meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
@@ -29,7 +29,7 @@ function UrlInviteThisBot() {
 <meta name="twitter:description"
       content="🧐 ・Username <%= user.username %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
-          🤖 ・ Is he/she a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
+          🤖 ・ This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
 <meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
@@ -74,7 +74,7 @@ function UrlInviteThisBot() {
                 <h3>🔧 ・ ID <span class="inf_colored"><%= user.id %></span></h3>
                 <h3>🧐 ・ Username <span class="inf_colored"><%= user.username %></span></h3>
                 <h3>#️⃣ ・ Discriminator <span class="inf_colored">#<%= user.discriminator %></span></h3>
-                <h3>🤖 ・  Is he/she a bot ? <span
+                <h3>🤖 ・  This is a bot ? <span
                             class="inf_colored"><%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %></span>
                 </h3>
                 <h3>📆 ・ Created at <span class="inf_colored"
