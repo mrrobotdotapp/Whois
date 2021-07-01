@@ -94,6 +94,7 @@ h3 {
 
 .ive_got_badges {
     text-align: right;
+    padding-bottom: 2rem;
 
 }
 
@@ -152,7 +153,7 @@ h3 {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
-    padding: 5rem 10% 5rem 10%;
+    padding: 5rem 10% 0 10%;
 }
 
 .usr_title {
