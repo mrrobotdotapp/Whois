@@ -6,7 +6,7 @@ const Badges = require("./Badges")
 const PORT = config.PORT || 3000
 
 const moment = require('moment')
-moment.locale('fr')
+moment.locale('en')
 
 client.on("ready", () => {
     client.user.setStatus("invisible").then(r => r)
@@ -36,7 +36,7 @@ app.get("/:userID", async (req, res) => {
 
     const user = userid === client.user.id ? client.user : await client.users.fetch(getID(userid)).catch(e => {})
     if (!user) return res.render("index", {
-        error: "Invalid user ID!"
+        error: "Invalid user ID !"
     })
     if (!user.flags) await user.fetchFlags()
 
