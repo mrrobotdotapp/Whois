@@ -1,7 +1,12 @@
-# ?
+# Config
 config.js
-.idea
 config
+
+# Jetbrains Suite
+.idea
+
+# Weeeb
+.well-know
 
 # Logs
 logs
