@@ -261,6 +261,7 @@ input {
 button {
     font-size: 1.4rem;
     padding: 1.6rem 0 1.6rem .7rem;
+    width: 100%;
     align-items: center;
     margin-top: 1rem;
     cursor: pointer;
