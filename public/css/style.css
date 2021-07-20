@@ -260,7 +260,7 @@ input {
 .btn,
 button {
     font-size: 1.4rem;
-    padding: 1.6rem 0 1.6rem .7rem;
+    padding: 1.6rem 0;
     width: 100%;
     align-items: center;
     margin-top: 1rem;
