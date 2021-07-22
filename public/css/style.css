@@ -287,3 +287,7 @@ form {
     color: white;
     padding: 1rem 5%;
 }
+
+#bmc-wbtn {
+    box-shadow: unset !important;
+}
