@@ -4,7 +4,7 @@
   "theme_color": "#5865F2",
   "background_color": "#fff",
   "display": "fullscreen",
-  "purpose": "maskable",
+  "purpose": "any maskable",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/?utm_source=pwa",
