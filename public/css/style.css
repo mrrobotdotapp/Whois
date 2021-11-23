@@ -181,7 +181,8 @@ h3 {
 #installContainer > #InstallPWA > img {
     width: 3rem;
 }
-.home_link {
+.footer, .home_link {
+    user-select: none;
     text-align: center;
     padding-top: 2.3rem;
     font-size: 17px;
