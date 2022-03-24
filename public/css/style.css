@@ -94,7 +94,7 @@ h3 {
 
 .ive_got_badges {
     text-align: right;
-    padding-bottom: 2rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -251,7 +251,7 @@ h3 {
     width: -webkit-fill-available;
     display: inline-block;
     padding: unset;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 5px 0;
 }
 .btn, button {
