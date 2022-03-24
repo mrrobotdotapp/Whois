@@ -134,7 +134,16 @@ h3 {
     border-radius: 50%;
     padding: 10px;
 }
-
+.btn__groups {
+    display: flex;
+    gap: 10px;
+}
+@media (max-width: 650px) {
+    .btn__groups {
+        flex-direction: column;
+        gap: unset;
+    }
+}
 .btn_blurple {
     background-color: var(--dark-blurple);
     color: #FFFFFF;

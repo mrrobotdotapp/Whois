@@ -13,7 +13,7 @@ function generateBadge(verified = false) {
     return `<img draggable="false" class="rounded botbadge" src="${flags.find(i => i.name === "Bot").url}">`
 }
 function UrlInviteThisBot() {
-    return `<a class="btn btn_blurple" href="https://discord.com/oauth2/authorize?client_id=${user.id}&scope=bot&permissions=0">Add this bot to your server</a>`
+    return `<a class="btn btn_blurple" href="https://discord.com/oauth2/authorize?client_id=${user.id}&scope=applications.commands%20bot&permissions=0">Add this bot to your server</a>`
 }
 %>
 <title>Whois on Discord — <%= user.username %></title>
@@ -100,7 +100,11 @@ function UrlInviteThisBot() {
                         </div>
                     <% }}) %>
                 </div>
-                <%- user.bot ? UrlInviteThisBot() : "" %>
+                <div class="btn__groups">
+                    <a class="btn btn_blurple" href="discord://discord.com/users/<%= user.id %>">See profile on Discord</a>
+                    <%- user.bot ? UrlInviteThisBot() : "" %>
+                </div>
+
                 <div class="home_link">
                     <a href="/">← Return to the home page.</a>
                 </div>
