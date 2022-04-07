@@ -54,21 +54,17 @@
 <%- include("./partials/loader.ejs") %>
 <%- include("./partials/footer.ejs") %>
 <script type="text/javascript">
-    var _paq = window._paq || [];
-    _paq.push(["setDoNotTrack", true]);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-        var u = "//analytics.thomasbnt.dev/";
-        _paq.push(['setTrackerUrl', u + 'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript';
-        g.async = true;
-        g.defer = true;
-        g.src = u + 'matomo.js';
-        s.parentNode.insertBefore(g, s);
-    })();
+  var _paq = window._paq = window._paq || [];
+  _paq.push(["setCookieDomain", "*.whois.mrrobot.app"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.thomasbnt.dev/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '9']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
     const cfcl = 'color:#314759; font-size: small; font-family: \'Open Sans\', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", sans-serif'
     console.group("Informations")
     console.log('%cHello friend.', cfcl)
@@ -76,6 +72,6 @@
     console.log('%cStar the project : https://github.com/Mist3r-Robot/Whois', cfcl)
     console.groupEnd("Informations")
 </script>
-<noscript><p><img src="//analytics.thomasbnt.dev/matomo.php?idsite=1&rec=1" style="border:0;" alt=""/></p></noscript>
+<noscript><p><img src="//analytics.thomasbnt.dev/matomo.php?idsite=9&rec=1" style="border:0;" alt=""/></p></noscript>
 </body>
 </html>
