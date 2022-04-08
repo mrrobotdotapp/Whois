@@ -1,7 +1,8 @@
 const express = require("express")
 const app = express()
 const config = require("./config")
-const client = new (require("discord.js")).Client()
+const { Intents } = require('discord.js');
+const client = new (require("discord.js")).Client({ intents: [Intents.FLAGS.GUILDS] })
 const Badges = require("./Badges")
 const PORT = config.PORT || 3000
 
@@ -9,7 +10,7 @@ const moment = require('moment')
 moment.locale('en')
 
 client.on("ready", () => {
-    client.user.setStatus("invisible").then(r => r)
+    client.user.setPresence({ activities: [{ name: 'with Whois' }], status: 'offline' })
 })
 
 client.login(config.TOKEN).then(r => r)
