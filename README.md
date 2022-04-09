@@ -13,7 +13,7 @@ Get information about Discord users and bots by ID.
 
 |home page|A profile|
 |-|-|
-|![Preview of the home page](https://i.thomasbnt.dev/i/fqz7v.png)|![Preview of a profile](https://i.thomasbnt.dev/i/5u80m.png)
+|![Preview of the home page](https://user-images.githubusercontent.com/14293805/162551251-c0976578-cb35-45cb-b2e3-dc667e57b003.png)|![Preview of a profile](https://user-images.githubusercontent.com/14293805/162551265-2af18a7e-decf-4f96-9449-e585ba6d8535.png)
 
 
 ## How to install it?
