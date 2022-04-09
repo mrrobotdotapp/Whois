@@ -8,6 +8,7 @@ Get information about Discord users and bots by ID.
 - PWA ready !
 - Good Performance and accessibility.
 - Nice blurple.
+- See the Discord profile
 
 ## Preview
 
