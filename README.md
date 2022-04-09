@@ -23,6 +23,13 @@ Get information about Discord users and bots by ID.
 2. Install all packages with `yarn` or `npm i`,
 3. Run with `npm run dev` or directly `node app.js`.
 
+## Thanks to Sponsors 
+
+![Sponsors](https://cdn.jsdelivr.net/gh/thomasbnt/sponsors/sponsors.svg)
+
+If you like this project, don't hesitate to [become a Sponsor](https://github.com/thomasbnt/sponsors), it would support me for the maintenance of several Open Source projects! You can also check my Buy Me a Coffee page for a ponctual donation or mensual membership.
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsor-%23EA54AE.svg?&style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/thomasbnt) [![Support me on Buy Me a Coffee](https://img.shields.io/badge/Support%20me-on%20Buy%20Me%20a%20Coffee-%23FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://www.buymeacoffee.com/thomasbnt?via=thomasbnt)
 
 ## Made with 💚
 
