@@ -1,6 +1,7 @@
 {
   "name": "Mr. Robøt — Whois on Discord",
   "short_name": "Whois Discord",
+  "description": "Get information about Discord users and bots by ID",
   "theme_color": "#5865F2",
   "background_color": "#fff",
   "display": "fullscreen",
@@ -56,6 +57,36 @@
       "src": "/img/manifest/512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/screens/screen_1.png",
+      "type": "image/png",
+      "media": "1081x2340",
+      "label": "Homepage",
+      "platform": "wide"
+    },
+    {
+      "src": "/img/screens/screen_2.png",
+      "type": "image/png",
+      "media": "1081x2340",
+      "label": "Example of a profile of a bot",
+      "platform": "wide"
+    },
+    {
+      "src": "/img/screens/screen_3.png",
+      "type": "image/png",
+      "media": "1081x2340",
+      "label": "Example of a profile of another bot",
+      "platform": "wide"
+    },
+    {
+      "src": "/img/screens/screen_4.png",
+      "type": "image/png",
+      "media": "1081x2340",
+      "label": "Example of a profile of a user",
+      "platform": "wide"
     }
   ]
 }
