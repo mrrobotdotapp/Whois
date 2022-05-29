@@ -9,6 +9,7 @@
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/?utm_source=pwa",
+  "categories": ["developer tools", "developer", "social", "utilities"],
   "prefer_related_applications": true,
   "related_applications": [
     {
