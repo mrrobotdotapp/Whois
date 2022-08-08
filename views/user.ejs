@@ -104,6 +104,11 @@ function UrlInviteThisBot() {
                     <a class="btn btn_blurple" href="https://discord.com/users/<%= user.id %>">See profile on Discord</a>
                     <%- user.bot ? UrlInviteThisBot() : "" %>
                 </div>
+                
+                <% if (user.bannerURL()) { %>
+                    <a href="<%= user.bannerURL({ dynamic: true, format: "png", size: 1024 }) %>" target="_blank" rel="noopener">
+                        <button type="button" class="btn_blurple" title="View Profile Banner " > View / Download Profile Banner </button></a>
+                    <% } %>
 
                 <div class="home_link">
                     <a href="/">← Return to the home page.</a>
