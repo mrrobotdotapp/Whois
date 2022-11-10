@@ -8,7 +8,7 @@ function checkDays(date) {
 }
 function generateBadge(verified = false) {
     if (flags.length < 1) return
-    if (!verified && flags.find(i => i.name === "Bot")) return `<img draggable="false" class="botbadge" alt="Bot badge" src="${flags.find(i => i.name === "Bot").url}">`
+    if (!verified && user.bot) return `<img draggable="false" class="botbadge" alt="Bot badge" src="${flags.find(i => i.name === "Bot").url}">`
     if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="botbadge-v" alt="Bot certified badge" src="${flags.find(i => i.name === "Verified Bot").url}">`
     return `<img draggable="false" class="rounded botbadge" src="${flags.find(i => i.name === "Bot").url}">`
 }
