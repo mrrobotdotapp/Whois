@@ -40,14 +40,19 @@ app.get("/:userID", async (req, res) => {
         error: "Invalid user ID !"
     })
     if (!user.flags) await user.fetchFlags()
+    let flags = []
 
-    const Flags = user.flags.toArray()
-    if (user.bot && Flags.includes("VERIFIED_BOT")) user.verified = true
-    const flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m])
-    if (user.avatar && user.avatar.startsWith("a_")) flags.push(Badges["DISCORD_NITRO"])
-    if (user.flags.has(1 << 18)) flags.push(Badges["CERTIFIED_MODERATOR"])
-    if (user.bot) {
-        flags.push(Badges["BOT"])
+    if (user.flags === null) {
+        Flags = []
+    } else {
+        Flags = user.flags.toArray()
+        if (user.bot && Flags.includes("VERIFIED_BOT")) user.verified = true
+        flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m])
+        if (user.avatar && user.avatar.startsWith("a_")) flags.push(Badges["DISCORD_NITRO"])
+        if (user.flags.has(1 << 18)) flags.push(Badges["CERTIFIED_MODERATOR"])
+        if (user.bot) {
+            flags.push(Badges["BOT"])
+        }
     }
 
     return res.render("user", {
