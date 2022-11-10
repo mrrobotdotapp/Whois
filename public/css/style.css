@@ -292,7 +292,10 @@ form {
     display: flex;
     flex: auto;
     flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 #ConnectionState {
     background-color: var(--red);
     color: white;
