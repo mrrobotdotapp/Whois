@@ -51,6 +51,10 @@ module.exports = {
         name: "Verified Bot Developer",
         url: "/img/badges/verified_bot_developer.png"
     },
+    ACTIVE_DEVELOPER: {
+        name: "Active Bot Developer",
+        url: "/img/badges/active_bot_developer.png"
+    },
     CERTIFIED_MODERATOR: {
         name: "Certified Moderator",
         url: "/img/badges/certified_moderator.png"
