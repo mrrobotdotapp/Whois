@@ -192,6 +192,9 @@ h3 {
     width: 3rem;
 }
 .footer, .home_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     user-select: none;
     text-align: center;
     padding-top: 2.3rem;
@@ -292,7 +295,10 @@ form {
     display: flex;
     flex: auto;
     flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
 }
+
 #ConnectionState {
     background-color: var(--red);
     color: white;
