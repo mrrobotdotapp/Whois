@@ -50,6 +50,8 @@ app.get("/:userID", async (req, res) => {
         flags = Flags.filter(b => !!Badges[b]).map(m => Badges[m])
         if (user.avatar && user.avatar.startsWith("a_")) flags.push(Badges["DISCORD_NITRO"])
         if (user.flags.has(1 << 18)) flags.push(Badges["CERTIFIED_MODERATOR"])
+        if (user.flags.has(1 << 17)) flags.push(Badges["VERIFIED_DEVELOPER"])
+        if(user.flags.has(1 << 22)) flags.push(Badges["ACTIVE_DEVELOPER"])
         if (user.bot) {
             flags.push(Badges["BOT"])
         }
