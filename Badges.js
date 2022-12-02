@@ -56,7 +56,7 @@ module.exports = {
         url: "/img/badges/active_bot_developer.png"
     },
     CERTIFIED_MODERATOR: {
-        name: "Certified Moderator",
+        name: "Moderator Programs Alumni",
         url: "/img/badges/certified_moderator.png"
     }
 };
