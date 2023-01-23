@@ -3,7 +3,7 @@
 Get information about Discord users and bots by ID.
 
 ## Advantages
-- Get informations like ID, Username, Discriminator, if it is a bot, created at, total numbers since created.
+- Get information like ID, Username, Discriminator, if it is a bot, created at, total numbers since created.
 - If it is a bot, you can directly add the bot from this page.
 - PWA ready !
 - Good Performance and accessibility.
