@@ -22,11 +22,7 @@ function UrlInviteThisBot() {
 <link rel="canonical" href="https://whois.mrrobot.app/<%= user.id %>"/>
 <meta name="description"
       content="🧐 ・Username <%= user.username %>
-      <% if (user.discriminator !== "0") { %>
-        #️⃣ ・Discriminator #<%= user.discriminator %>
-      <% } else { %>
-        #️⃣ ・Discriminator #None
-        <% } %>
+          #️⃣ ・Discriminator #<%= user.discriminator %>
           🤖 ・This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
@@ -35,11 +31,7 @@ function UrlInviteThisBot() {
 <meta name="twitter:title" content="Information about <%= user.username %>"/>
 <meta name="twitter:description"
       content="🧐 ・Username <%= user.username %>
-      <% if (user.discriminator !== "0") { %>
-          #️⃣ ・Discriminator #<%= user.discriminator %>
-            <% } else { %>
-          #️⃣ ・Discriminator #None
-            <% } %>
+         #️⃣ ・Discriminator #<%= user.discriminator %>
           🤖 ・ This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
