@@ -24,7 +24,9 @@ function UrlInviteThisBot() {
       content="🧐 ・Username <%= user.username %>
       <% if (user.discriminator !== "0") { %>
         #️⃣ ・Discriminator #<%= user.discriminator %>
-      <% } %>
+      <% } else { %>
+        #️⃣ ・Discriminator #None
+        <% } %>
           🤖 ・This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
@@ -35,7 +37,9 @@ function UrlInviteThisBot() {
       content="🧐 ・Username <%= user.username %>
       <% if (user.discriminator !== "0") { %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
-        <% } %>
+            <% } else { %>
+          #️⃣ ・Discriminator #None
+            <% } %>
           🤖 ・ This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
