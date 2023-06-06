@@ -22,7 +22,9 @@ function UrlInviteThisBot() {
 <link rel="canonical" href="https://whois.mrrobot.app/<%= user.id %>"/>
 <meta name="description"
       content="🧐 ・Username <%= user.username %>
-          #️⃣ ・Discriminator #<%= user.discriminator %>
+      <% if (user.discriminator !== "0") { %>
+        #️⃣ ・Discriminator #<%= user.discriminator %>
+      <% } %>
           🤖 ・This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
@@ -31,7 +33,9 @@ function UrlInviteThisBot() {
 <meta name="twitter:title" content="Information about <%= user.username %>"/>
 <meta name="twitter:description"
       content="🧐 ・Username <%= user.username %>
+      <% if (user.discriminator !== "0") { %>
           #️⃣ ・Discriminator #<%= user.discriminator %>
+        <% } %>
           🤖 ・ This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・Number of days <%= checkDays(user.createdAt) %>"/>
@@ -72,8 +76,10 @@ function UrlInviteThisBot() {
                 <div class="col">
                     <a href="https://discord.com/users/<%= user.id %>">
                         <h1 class="username"><%= user.username.substr(0, 32) %>
-                            <small class="discriminator">#<%= user.discriminator %>
+                            <% if (user.discriminator !== "0") { %>                              
+                               <small class="discriminator">#<%= user.discriminator %>
                                 <%- user.bot ? (user.bot && user.verified) ? generateBadge(true) : generateBadge() : "" %></small>
+                            <% } %>
                         </h1>
                     </a>
                 </div>
@@ -81,7 +87,9 @@ function UrlInviteThisBot() {
             <div class="inf_box">
                 <h3>🔧 ・ ID <span class="inf_colored"><%= user.id %></span></h3>
                 <h3>🧐 ・ Username <span class="inf_colored"><%= user.username %></span></h3>
-                <h3>#️⃣ ・ Discriminator <span class="inf_colored">#<%= user.discriminator %></span></h3>
+                <% if (user.discriminator !== "0") { %>
+                    <h3>#️⃣ ・ Discriminator <span class="inf_colored">#<%= user.discriminator %></span></h3>
+                <% } %>
                 <h3>🤖 ・ This is a bot ? <span
                             class="inf_colored"><%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %></span>
                 </h3>
