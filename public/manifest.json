@@ -10,14 +10,7 @@
   "scope": "/",
   "start_url": "/?utm_source=pwa",
   "categories": ["developer tools", "developer", "social", "utilities"],
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=app.mrrobot.whois.twa",
-      "id": "app.mrrobot.whois.twa"
-    }
-  ],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/img/manifest/72x72.png",
