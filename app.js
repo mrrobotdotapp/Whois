@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
     })
 })
 
-app.post("/", async (req, res) => {
+app.post("/whois", async (req, res) => {
     if(req.body.user) res.redirect(`/${req.body.user}`)
     else res.redirect("/404")
 })
