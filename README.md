@@ -1,4 +1,5 @@
-# Whois
+![Whois](docs/whois.png#gh-light-mode-only)
+![Whois](docs/whois-dark.png#gh-dark-mode-only)
 
 Get information about Discord users and bots by ID.
 
@@ -12,9 +13,9 @@ Get information about Discord users and bots by ID.
 
 ## Preview
 
-|home page|A profile|
-|-|-|
-|![Preview of the home page](https://user-images.githubusercontent.com/14293805/162551251-c0976578-cb35-45cb-b2e3-dc667e57b003.png)|![Preview of a profile](https://user-images.githubusercontent.com/14293805/162551265-2af18a7e-decf-4f96-9449-e585ba6d8535.png)
+| home page                                                                                                                          | A profile                                                                                                                      |
+|------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| ![Preview of the home page](https://user-images.githubusercontent.com/14293805/162551251-c0976578-cb35-45cb-b2e3-dc667e57b003.png) | ![Preview of a profile](https://user-images.githubusercontent.com/14293805/162551265-2af18a7e-decf-4f96-9449-e585ba6d8535.png) |
 
 ## How to install it?
 
@@ -40,4 +41,4 @@ If you like this project, don't hesitate to [become a Sponsor](https://github.co
 
 ## Licence
 
-The source code is public is under [AGPL-3.0 License](LICENSE). However the logo <code><img height="20" src="https://whois.mrrobot.app/img/whois.png"></code> is not.
+The source code is public is under [AGPL-3.0 License](LICENSE). However, the logo <code><img height="20" src="https://whois.mrrobot.app/img/whois.png"></code> is not.
