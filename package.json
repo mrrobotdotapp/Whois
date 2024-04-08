@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mist3r-Robot/Whois.git"
+    "url": "git+https://github.com/mrrobotdotapp/Whois.git"
   },
   "author": "Thomas Bnt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Mist3r-Robot/Whois/issues"
+    "url": "https://github.com/mrrobotdotapp/Whois/issues"
   },
-  "homepage": "https://github.com/Mist3r-Robot/Whois#readme",
+  "homepage": "https://github.com/mrrobotdotapp/Whois#readme",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "ejs": "^3.1.7",
-    "express": "^4.17.3",
-    "moment": "^2.29.4"
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "moment": "^2.30.1"
   }
 }
