@@ -19,8 +19,9 @@
   "dependencies": {
     "discord.js": "^13.6.0",
     "ejs": "^3.1.10",
-    "express": "^4.19.2",
+    "express": "5.0.0",
     "moment": "^2.30.1",
-    "zod": "^3.23.8"
-  }
+    "zod": "^3.24.1"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
