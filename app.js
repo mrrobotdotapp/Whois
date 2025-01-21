@@ -20,18 +20,18 @@ app.use(express.static("public"))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get("/", (req, res) => {
+app.get(`/`, (req, res) => {
     res.render("index", {
         error: null
     })
 })
 
-app.post("/whois", async (req, res) => {
+app.post(`/whois`, async (req, res) => {
     if(req.body.user) res.redirect(`/${req.body.user}`)
     else res.redirect("/404")
 })
 
-app.get("/:userID", async (req, res) => {
+app.get(`/:userID`, async (req, res) => {
     const userid = req.params.userID
     //if (!userid) return res.redirect("/404")
 
@@ -41,9 +41,9 @@ app.get("/:userID", async (req, res) => {
     })
     if (!user.flags) await user.fetchFlags()
     let flags = []
+    let Flags;
 
     if (user.flags === null) {
-        Flags = []
     } else {
         Flags = user.flags.toArray()
         if (user.bot && Flags.includes("VERIFIED_BOT")) user.verified = true
@@ -51,7 +51,7 @@ app.get("/:userID", async (req, res) => {
         if (user.avatar && user.avatar.startsWith("a_")) flags.push(Badges["DISCORD_NITRO"])
         if (user.flags.has(1 << 18)) flags.push(Badges["CERTIFIED_MODERATOR"])
         if (user.flags.has(1 << 17)) flags.push(Badges["VERIFIED_DEVELOPER"])
-        if(user.flags.has(1 << 22)) flags.push(Badges["ACTIVE_DEVELOPER"])
+        if (user.flags.has(1 << 22)) flags.push(Badges["ACTIVE_DEVELOPER"])
         if (user.bot) {
             flags.push(Badges["BOT"])
         }
@@ -64,7 +64,7 @@ app.get("/:userID", async (req, res) => {
     })
 })
 
-app.all("*", (req, res) => {
+app.all(/(.*)/, (req, res) => {
     return res.render("404")
 })
 
