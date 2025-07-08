@@ -26,7 +26,7 @@ function UrlInviteThisBot() {
           🤖 ・ This is a bot ? <%= user.bot ? "Yes " : "No" %><%= user.verified ? " and verified. ✔" : "" %>
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・ Number of days <%= checkDays(user.createdAt) %>"/>
-<meta name="image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
+<meta name="image" content="<%= user.displayAvatarURL({dynamic: true, format: "png", size: 1024}) %>"/>
 <meta property="og:site_name" content="ID : <%= user.id %> — Information card"/>
 <meta name="twitter:title" content="Information about <%= user.username %>"/>
 <meta name="twitter:description"
@@ -36,20 +36,9 @@ function UrlInviteThisBot() {
           📆 ・ Created at <%= moment(user.createdAt).format('dddd LL LT') %>
           ⏲️ ・ Number of days <%= checkDays(user.createdAt) %>"/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:image" content="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>"/>
+<meta name="twitter:image" content="<%= user.displayAvatarURL({dynamic: true, format: "png", size: 1024}) %>"/>
 <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
 
-<style>
-    .space_x {
-        margin-top: 1vh;
-    }
-
-    @media (max-width: 900px) {
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
-</style>
 </head>
 <%- include("./partials/loader.ejs") %>
 <%- include("./partials/footer.ejs") %>
@@ -58,23 +47,47 @@ function UrlInviteThisBot() {
     You are offline.
 </div>
 <div class="ctner space_x">
+    <% if (user.bannerURL()) { %>
+        <div class="user-banner">
+            <a href="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>" target="_blank"
+               rel="noopener">
+                <img src="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>"
+                     alt="Bannière de <%= user.username %>"
+                     class="banner-img" draggable="false"/>
+            </a>
+        </div>
+    <% } %>
     <div class="row">
         <div class="bg_ctner_main">
             <div class="row user_main_inf">
-                <div class="col">
-                    <a href="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }) %>" target="_blank"
+                <div class="col user-avatar-col">
+                    <a href="<%= user.displayAvatarURL({dynamic: true, format: "png", size: 1024}) %>" target="_blank"
                        rel="noopener">
-                        <img src="<%= user.displayAvatarURL({ dynamic: true, format: "png", size: 128 }) %>"
+                        <img src="<%= user.displayAvatarURL({dynamic: true, format: "png", size: 128}) %>"
                              draggable="false"
                              class="rounded avatar" alt="avatar">
                     </a>
                 </div>
                 <div class="col">
-                    <a href="https://discord.com/users/<%= user.id %>">
+                    <div class="ive_got_badges">
+                        <%
+                        flags.forEach(badge => {
+                        if (badge.name === "Bot" || badge.name === "Verified Bot") return
+                        else {
+                        %>
+                            <div class="white_circle">
+                                <img class="badges" draggable="false" src="<%= badge.url %>"
+                                     title="<%= badge.name %>"
+                                     alt="<%= badge.name %> Badge">
+                            </div>
+                        <% }}) %>
+                    </div>
+
+                    <a href="https://discord.com/users/<%= user.id %>" class="user_hidden">
                         <h1 class="username"><%= user.username.substr(0, 32) %>
-                            <% if (user.discriminator !== "0") { %>                              
-                               <small class="discriminator">#<%= user.discriminator %>
-                                <%- user.bot ? (user.bot && user.verified) ? generateBadge(true) : generateBadge() : "" %></small>
+                            <% if (user.discriminator !== "0") { %>
+                                <small class="discriminator">#<%= user.discriminator %>
+                                    <%- user.bot ? (user.bot && user.verified) ? generateBadge(true) : generateBadge() : "" %></small>
                             <% } %>
                         </h1>
                     </a>
@@ -93,21 +106,9 @@ function UrlInviteThisBot() {
                                           title="Local time"><%= moment(user.createdAt).format('dddd LL LT') %></span>
                 </h3>
                 <h3>⏲️ ・ Number of days <span class="inf_colored"><%= checkDays(user.createdAt) %></span></h3>
-                <div class="ive_got_badges">
-                    <%
-                    flags.forEach(badge => {
-                    if (badge.name === "Bot" || badge.name === "Verified Bot") return
-                    else {
-                    %>
-                        <div class="white_circle">
-                            <img class="badges" draggable="false" src="<%= badge.url %>"
-                                 title="<%= badge.name %>"
-                                 alt="<%= badge.name %> Badge">
-                        </div>
-                    <% }}) %>
-                </div>
                 <div class="btn__groups">
-                    <a class="btn btn_blurple" href="https://discord.com/users/<%= user.id %>">See profile on Discord</a>
+                    <a class="btn btn_blurple" href="https://discord.com/users/<%= user.id %>">See profile on
+                        Discord</a>
                     <%- user.bot ? UrlInviteThisBot() : "" %>
                 </div>
 
