@@ -347,8 +347,9 @@ form {
 	z-index: 1;
 	height: 15rem;
 }
+
 .user-banner img:hover {
-	filter: brightness(0.9);
+	filter: brightness(0.7);
 }
 
 @media screen and (max-width: 900px) {
