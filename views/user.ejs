@@ -2,21 +2,28 @@
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
 <%
-function checkDays(date) {
-    let now = new Date()
-    let diff = now.getTime() - date.getTime()
-    let days = Math.floor(diff / 86400000)
-    return days + (days === 1 ? " day" : " days")
-}
-function generateBadge(verified = false) {
-    if (flags.length < 1) return
-    if (!verified && user.bot) return `<img draggable="false" class="botbadge" alt="Bot badge" src="${flags.find(i => i.name === "Bot").url}">`
-    if (verified && flags.find(i => i.name === "Verified Bot")) return `<img draggable="false" class="botbadge-v" alt="Bot certified badge" src="${flags.find(i => i.name === "Verified Bot").url}">`
-    return `<img draggable="false" class="rounded botbadge" src="${flags.find(i => i.name === "Bot").url}">`
-}
-function UrlInviteThisBot() {
-    return `<a class="btn btn_blurple" href="https://discord.com/oauth2/authorize?client_id=${user.id}&scope=applications.commands%20bot&permissions=0">Add this bot to your server</a>`
-}
+const checkDays = date => {
+    const now = new Date();
+    const diff = now.getTime() - date.getTime();
+    const days = Math.floor(diff / 86400000);
+    return days + (days === 1 ? " day" : " days");
+};
+
+const generateBadge = (verified = false) => {
+    if (!flags || flags.length < 1) return "";
+    if (!verified && user.bot) {
+        const botBadge = flags.find(i => i.name === "Bot");
+        return botBadge ? `<img draggable="false" class="botbadge" alt="Bot badge" src="${botBadge.url}">` : "";
+    }
+    if (verified) {
+        const verifiedBadge = flags.find(i => i.name === "Verified Bot");
+        return verifiedBadge ? `<img draggable="false" class="botbadge-v" alt="Bot certified badge" src="${verifiedBadge.url}">` : "";
+    }
+    return "";
+};
+
+const UrlInviteThisBot = () =>
+        `<a class="btn btn_blurple" href="https://discord.com/oauth2/authorize?client_id=${user.id}&scope=applications.commands%20bot&permissions=0">Add this bot to your server</a>`;
 %>
 <title>Whois on Discord — <%= user.username %></title>
 <link rel="canonical" href="https://whois.mrrobot.app/<%= user.id %>"/>
@@ -38,7 +45,6 @@ function UrlInviteThisBot() {
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:image" content="<%= user.displayAvatarURL({dynamic: true, format: "png", size: 1024}) %>"/>
 <meta name="twitter:url" content="https://whois.mrrobot.app/<%= user.id %>">
-
 </head>
 <%- include("./partials/loader.ejs") %>
 <%- include("./partials/footer.ejs") %>
@@ -49,8 +55,7 @@ function UrlInviteThisBot() {
 <div class="ctner space_x">
     <% if (user.bannerURL()) { %>
         <div class="user-banner">
-            <a href="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>" target="_blank"
-               rel="noopener">
+            <a href="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>" target="_blank" rel="noopener">
                 <img src="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>"
                      alt="Bannière de <%= user.username %>"
                      class="banner-img" draggable="false"/>
@@ -70,24 +75,21 @@ function UrlInviteThisBot() {
                 </div>
                 <div class="col">
                     <div class="ive_got_badges">
-                        <%
-                        flags.forEach(badge => {
-                        if (badge.name === "Bot" || badge.name === "Verified Bot") return
-                        else {
-                        %>
+                        <% flags && flags.forEach(badge => {
+                        if (badge.name !== "Bot" && badge.name !== "Verified Bot") { %>
                             <div class="white_circle">
                                 <img class="badges" draggable="false" src="<%= badge.url %>"
                                      title="<%= badge.name %>"
                                      alt="<%= badge.name %> Badge">
                             </div>
-                        <% }}) %>
+                        <% } }) %>
                     </div>
-
                     <a href="https://discord.com/users/<%= user.id %>" class="user_hidden">
                         <h1 class="username"><%= user.username.substr(0, 32) %>
                             <% if (user.discriminator !== "0") { %>
                                 <small class="discriminator">#<%= user.discriminator %>
-                                    <%- user.bot ? (user.bot && user.verified) ? generateBadge(true) : generateBadge() : "" %></small>
+                                    <%- user.bot ? (user.verified ? generateBadge(true) : generateBadge()) : "" %>
+                                </small>
                             <% } %>
                         </h1>
                     </a>
@@ -111,7 +113,6 @@ function UrlInviteThisBot() {
                         Discord</a>
                     <%- user.bot ? UrlInviteThisBot() : "" %>
                 </div>
-
                 <div class="home_link">
                     <a href="/">← Return to the home page</a>
                     <span class="home_link_dots">・</span>
@@ -122,5 +123,6 @@ function UrlInviteThisBot() {
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
