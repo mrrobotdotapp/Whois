@@ -132,7 +132,7 @@ h3 {
 	background-color: var(--dark-blurple);
 	-webkit-box-decoration-break: clone;
 	border-radius: 25px;
-	padding: 0 8px;
+	padding: 0 10px;
 	user-select: all;
 }
 
