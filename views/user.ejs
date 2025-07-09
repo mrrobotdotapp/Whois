@@ -53,15 +53,15 @@ const UrlInviteThisBot = () =>
     You are offline.
 </div>
 <div class="ctner space_x">
+    <div class="user-banner">
     <% if (user.bannerURL()) { %>
-        <div class="user-banner">
             <a href="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>" target="_blank" rel="noopener">
                 <img src="<%= user.bannerURL({dynamic: true, format: 'png', size: 600}) %>"
                      alt="Bannière de <%= user.username %>"
                      class="banner-img" draggable="false"/>
             </a>
-        </div>
     <% } %>
+    </div>
     <div class="row">
         <div class="bg_ctner_main">
             <div class="row user_main_inf">
