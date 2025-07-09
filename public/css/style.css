@@ -336,7 +336,10 @@ form {
 	max-width: 900px;
 	margin: 0 auto;
 	width: 100%;
-
+	border-radius: 10px;
+	transition: .3s;
+	z-index: 1;
+	height: 15rem;
 }
 
 .user-banner a, .user-banner a img {
