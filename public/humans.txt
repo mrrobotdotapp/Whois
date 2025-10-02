@@ -2,7 +2,6 @@
 
 Name     : Thomas Bnt.
 Site     : admin[at]thomasbnt[dot.]fr , only for contact Administration.
-Twitter  : @thomasbnt_
 Location : France.
 
 # TECHNOLOGY
