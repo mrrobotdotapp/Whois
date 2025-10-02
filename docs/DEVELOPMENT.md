@@ -55,7 +55,7 @@ Main Express application setup:
 
 #### `src/config/`
 Configuration management:
-- `index.js` - Configuration loader (supports .env and config.js)
+- `index.js` - Configuration loader (config.js)
 - `config.example.js` - Template for configuration
 
 #### `src/routes/`
@@ -115,8 +115,7 @@ cd Whois
 npm install
 
 # Configure
-npm run setup
-# Edit .env with your Discord bot token
+cp src/config.example.js src/config.js
 ```
 
 ### 2. Run Development Server
