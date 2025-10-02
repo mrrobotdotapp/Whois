@@ -169,6 +169,10 @@ dependencies {
 - Ajouter `purpose: "any maskable"` dans le manifest
 - Utiliser maskable.app pour tester vos icônes
 
+## Quick Start
+
+Pour commencer rapidement, consultez le [Guide de Démarrage Rapide TWA](./QUICK_START_TWA.md).
+
 ## Resources
 
 - [TWA Documentation officielle](https://developer.chrome.com/docs/android/trusted-web-activity/)

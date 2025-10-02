@@ -135,6 +135,12 @@ Before submitting:
 - Test PWA features (install, offline mode)
 - Verify responsive design
 
+## Additional Resources
+
+- [Development Guide](docs/DEVELOPMENT.md) - Detailed architecture and development info
+- [TWA Setup Guide](docs/TWA_SETUP.md) - Complete TWA transformation guide
+- [Quick Start TWA](docs/QUICK_START_TWA.md) - Quick TWA setup
+
 ## Questions?
 
 Feel free to open an issue if you have questions or need help!

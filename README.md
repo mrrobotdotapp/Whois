@@ -48,7 +48,12 @@ Whois/
 
 ## TWA (Trusted Web Activity) Setup
 
-This application is ready to be transformed into an Android app using TWA technology. For detailed instructions on how to create and publish your Android app, please see [TWA Setup Guide](docs/TWA_SETUP.md).
+This application is ready to be transformed into an Android app using TWA technology.
+
+**Quick Links:**
+- 🚀 [Quick Start Guide](docs/QUICK_START_TWA.md) - Get your Android app in minutes
+- 📖 [Complete TWA Setup Guide](docs/TWA_SETUP.md) - Detailed documentation
+- ✅ Validate TWA readiness: `npm run validate-twa`
 
 ## Thanks to Sponsors 
 
