@@ -14,8 +14,14 @@ router.get('/', (req, res) => {
 
 // Whois POST route
 router.post('/whois', async (req, res) => {
-    if (req.body.user) res.redirect(`/${req.body.user}`);
-    else res.redirect('/404');
+    const userInput = req.body.user;
+    // Only allow alphanumeric, underscores, and hyphens, 1-64 chars (adjust as needed)
+    const validUserPattern = /^[\w-]{1,64}$/;
+    if (typeof userInput === 'string' && validUserPattern.test(userInput)) {
+        res.redirect(`/${userInput}`);
+    } else {
+        res.redirect('/404');
+    }
 });
 
 // User profile route
