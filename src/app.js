@@ -4,13 +4,7 @@ const { Intents } = require('discord.js');
 const client = new (require('discord.js')).Client({ intents: [Intents.FLAGS.GUILDS] });
 
 // Load configuration
-let config;
-try {
-    config = require('./config/config');
-} catch (error) {
-    console.error('Configuration file not found. Please copy config.example.js to config.js and fill in your credentials.');
-    process.exit(1);
-}
+const config = require('./config');
 
 const PORT = config.PORT || 3000;
 

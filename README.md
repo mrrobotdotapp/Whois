@@ -36,9 +36,15 @@ Whois/
 
 ## How to install it?
 
-1. Copy `src/config/config.example.js` to `src/config/config.js` and fill it in with your Discord bot token,
-2. Install all packages with `yarn` or `npm i`,
-3. Run with `npm start` or `npm run dev`.
+### Option 1: Using .env file (Recommended)
+1. Copy `.env.example` to `.env` and fill in your Discord bot token
+2. Install all packages with `yarn` or `npm i`
+3. Run with `npm start` or `npm run dev`
+
+### Option 2: Using config.js
+1. Copy `src/config/config.example.js` to `src/config/config.js` and fill it in with your Discord bot token
+2. Install all packages with `yarn` or `npm i`
+3. Run with `npm start` or `npm run dev`
 
 ## TWA (Trusted Web Activity) Setup
 
