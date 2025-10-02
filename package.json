@@ -2,9 +2,10 @@
   "name": "whois",
   "version": "2.0.0",
   "description": "Get any Discord user/bot informations by ID !",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",

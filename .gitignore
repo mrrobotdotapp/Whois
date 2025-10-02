@@ -1,6 +1,7 @@
 # Config
 config.js
 config
+src/config/config.js
 
 # Jetbrains Suite
 .idea
