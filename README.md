@@ -6,10 +6,11 @@ Get information about Discord users and bots by ID.
 ## Advantages
 - Get information like ID, Username, Discriminator, if it is a bot, created at, total numbers since created.
 - If it is a bot, you can directly add the bot from this page.
-- PWA ready !
+- **PWA & TWA ready** ! Transform to Android app easily.
 - Good Performance and accessibility.
 - Nice blurple.
 - See the Discord profile
+- Well-organized project structure
 
 ## Preview
 
@@ -17,11 +18,42 @@ Get information about Discord users and bots by ID.
 |------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | ![Preview of the home page](https://user-images.githubusercontent.com/14293805/162551251-c0976578-cb35-45cb-b2e3-dc667e57b003.png) | ![Preview of a profile](https://user-images.githubusercontent.com/14293805/162551265-2af18a7e-decf-4f96-9449-e585ba6d8535.png) |
 
+## Project Structure
+
+```
+Whois/
+├── src/
+│   ├── app.js              # Main Express application
+│   ├── config/             # Configuration files
+│   ├── routes/             # Application routes
+│   └── utils/              # Utility functions
+├── public/                 # Static files
+│   ├── .well-known/        # TWA configuration
+│   └── manifest.json       # PWA/TWA manifest
+├── views/                  # EJS templates
+└── index.js                # Entry point
+```
+
 ## How to install it?
 
-1. Rename `config.example.js` to `config.js` and fill it in,
-2. Install all packages with `yarn` or `npm i`,
-3. Run with `npm run dev` or directly `node app.js`.
+### Option 1: Using .env file (Recommended)
+1. Copy `.env.example` to `.env` and fill in your Discord bot token
+2. Install all packages with `yarn` or `npm i`
+3. Run with `npm start` or `npm run dev`
+
+### Option 2: Using config.js
+1. Copy `src/config/config.example.js` to `src/config/config.js` and fill it in with your Discord bot token
+2. Install all packages with `yarn` or `npm i`
+3. Run with `npm start` or `npm run dev`
+
+## TWA (Trusted Web Activity) Setup
+
+This application is ready to be transformed into an Android app using TWA technology.
+
+**Quick Links:**
+- 🚀 [Quick Start Guide](docs/QUICK_START_TWA.md) - Get your Android app in minutes
+- 📖 [Complete TWA Setup Guide](docs/TWA_SETUP.md) - Detailed documentation
+- ✅ Validate TWA readiness: `npm run validate-twa`
 
 ## Thanks to Sponsors 
 

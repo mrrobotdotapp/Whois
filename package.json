@@ -2,9 +2,12 @@
   "name": "whois",
   "version": "2.0.0",
   "description": "Get any Discord user/bot informations by ID !",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js",
+    "dev": "node index.js",
+    "setup": "cp .env.example .env && echo 'Please edit .env file with your Discord bot token'",
+    "validate-twa": "node scripts/validate-twa.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/mrrobotdotapp/Whois#readme",
   "dependencies": {
     "discord.js": "^13.6.0",
+    "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "5.0.0",
     "moment": "^2.30.1",
