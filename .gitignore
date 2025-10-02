@@ -6,7 +6,7 @@ config
 .idea
 
 # Weeeb
-.well-know
+# .well-known is now tracked for TWA support
 
 # Logs
 logs
