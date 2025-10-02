@@ -16,7 +16,7 @@ client.on("ready", () => {
 client.login(config.TOKEN).then(r => r)
 
 app.set("view engine", "ejs")
-app.use(express.static("public"))
+app.use(express.static("public", { dotfiles: 'allow' }))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
