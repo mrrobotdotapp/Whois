@@ -18,7 +18,7 @@ router.post('/whois', async (req, res) => {
     // Only allow alphanumeric, underscores, and hyphens, 1-64 chars (adjust as needed)
     const validUserPattern = /^[\w-]{1,64}$/;
     if (typeof userInput === 'string' && validUserPattern.test(userInput)) {
-        res.redirect(`/${userInput}`);
+        res.redirect(`/${encodeURIComponent(userInput)}`);
     } else {
         res.redirect('/404');
     }
