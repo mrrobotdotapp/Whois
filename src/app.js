@@ -16,7 +16,9 @@ client.on('ready', () => {
     client.user.setPresence({ activities: [{ name: 'with Whois' }], status: 'offline' });
 });
 
-client.login(config.TOKEN).then(r => r);
+client.login(config.TOKEN).catch(err => {
+    console.error('Failed to login to Discord:', err);
+});
 
 // Store Discord client in app for routes to access
 app.set('discordClient', client);
