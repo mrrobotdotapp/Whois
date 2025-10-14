@@ -8,7 +8,12 @@
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
-  "categories": ["developer tools", "developer", "social", "utilities"],
+  "categories": [
+    "developer tools",
+    "developer",
+    "social",
+    "utilities"
+  ],
   "prefer_related_applications": true,
   "related_applications": [
     {
@@ -90,6 +95,13 @@
       "media": "1081x2340",
       "label": "Example of a profile of a user",
       "platform": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Discord bot",
+      "url": "https://mrrobot.app",
+      "description": "Add the Discord bot"
     }
   ]
 }
