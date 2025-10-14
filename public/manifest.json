@@ -4,7 +4,7 @@
   "description": "Get information about Discord users and bots by ID",
   "theme_color": "#5865F2",
   "background_color": "#5865F2",
-  "display": "standalone",
+  "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
@@ -103,5 +103,6 @@
       "url": "https://mrrobot.app",
       "description": "Add the Discord bot"
     }
-  ]
+  ],
+  "lang": "en"
 }
