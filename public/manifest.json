@@ -2,12 +2,15 @@
   "name": "Mr. Robøt — Whois on Discord",
   "short_name": "Whois Discord",
   "description": "Get information about Discord users and bots by ID",
-  "theme_color": "#5865F2",
-  "background_color": "#5865F2",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
   "display": "fullscreen",
   "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
+  "background_color": "#5865F2",
+  "theme_color": "#5865F2",
   "categories": [
     "developer tools",
     "developer",
@@ -24,85 +27,68 @@
   ],
   "icons": [
     {
-      "src": "/img/manifest/72x72.png",
-      "type": "image/png",
-      "sizes": "72x72"
-    },
-    {
-      "src": "/img/manifest/96x96.png",
-      "type": "image/png",
-      "sizes": "96x96"
-    },
-    {
-      "src": "/img/manifest/128x128.png",
-      "type": "image/png",
-      "sizes": "128x128"
-    },
-    {
-      "src": "/img/manifest/144x144.png",
-      "type": "image/png",
-      "sizes": "144x144"
-    },
-    {
-      "src": "/img/manifest/152x152.png",
-      "type": "image/png",
-      "sizes": "152x152"
-    },
-    {
-      "src": "/img/manifest/192x192.png",
-      "type": "image/png",
+      "src": "https://whois.mrrobot.app/img/manifest/192x192.png",
       "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/manifest/384x384.png",
       "type": "image/png",
-      "sizes": "384x384",
       "purpose": "any"
     },
     {
-      "src": "/img/manifest/512x512.png",
-      "type": "image/png",
+      "src": "https://whois.mrrobot.app/img/manifest/512x512.png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://whois.mrrobot.app/img/manifest/192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://whois.mrrobot.app/img/manifest/512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "/img/screens/screen_1.png",
+      "src": "https://whois.mrrobot.app/img/screens/screen_1.png",
       "type": "image/png",
-      "media": "1081x2340",
-      "label": "Homepage",
-      "platform": "wide"
+      "form_factor": "narrow",
+      "label": "Homepage"
     },
     {
-      "src": "/img/screens/screen_2.png",
+      "src": "https://whois.mrrobot.app/img/screens/screen_2.png",
       "type": "image/png",
-      "media": "1081x2340",
-      "label": "Example of a profile of a bot",
-      "platform": "wide"
+      "form_factor": "narrow",
+      "label": "Bot profile"
     },
     {
-      "src": "/img/screens/screen_3.png",
+      "src": "https://whois.mrrobot.app/img/screens/screen_3.png",
       "type": "image/png",
-      "media": "1081x2340",
-      "label": "Example of a profile of another bot",
-      "platform": "wide"
+      "form_factor": "narrow",
+      "label": "Another bot profile"
     },
     {
-      "src": "/img/screens/screen_4.png",
+      "src": "https://whois.mrrobot.app/img/screens/screen_4.png",
       "type": "image/png",
-      "media": "1081x2340",
-      "label": "Example of a profile of a user",
-      "platform": "wide"
+      "form_factor": "narrow",
+      "label": "User profile"
     }
   ],
   "shortcuts": [
     {
       "name": "Discord bot",
       "url": "https://mrrobot.app",
-      "description": "Add the Discord bot"
+      "description": "Add the Discord bot",
+      "icons": [
+        {
+          "src": "https://whois.mrrobot.app/img/manifest/shortcut-96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
-  ],
-  "lang": "en"
+  ]
 }
