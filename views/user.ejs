@@ -49,6 +49,12 @@ const UrlInviteThisBot = () =>
 <%- include("./partials/loader.ejs") %>
 <%- include("./partials/footer.ejs") %>
 <body>
+<div id="DeprecationBanner">
+    <div class="deprecation-inner">
+        <button id="DeprecationClose" onclick="this.closest('#DeprecationBanner').style.display='none'; localStorage.setItem('deprecation_banner_closed','1')" aria-label="Close">✕</button>
+        <span>⚠️ <strong>whois.mrrobot.app</strong> will be shutting down. To keep using <code>/whois</code>, <a href="https://docs.mrrobot.app/en/whoismrrobotapp" target="_blank" rel="noopener">install the Mr. Robøt bot</a>.</span>
+    </div>
+</div>
 <div id="ConnectionState" class="hidden">
     You are offline.
 </div>
@@ -124,5 +130,10 @@ const UrlInviteThisBot = () =>
         </div>
     </div>
 </div>
+<script>
+  if (localStorage.getItem('deprecation_banner_closed') === '1') {
+    document.getElementById('DeprecationBanner').style.display = 'none';
+  }
+</script>
 </body>
 </html>

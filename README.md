@@ -1,6 +1,9 @@
 ![Whois](docs/whois.png#gh-light-mode-only)
 ![Whois](docs/whois-dark.png#gh-dark-mode-only)
 
+> [!WARNING]
+> **This project is deprecated.** It is no longer maintained and will not receive updates or bug fixes. For more information, see the [official documentation](https://docs.mrrobot.app/en/whoismrrobotapp).
+
 Get information about Discord users and bots by ID.
 
 ## Advantages

@@ -4,7 +4,7 @@ const { Intents } = require('discord.js');
 const client = new (require('discord.js')).Client({ intents: [Intents.FLAGS.GUILDS] });
 
 // Load configuration
-const config = require('./config');
+const config = require('../config');
 
 const PORT = config.PORT || 3000;
 

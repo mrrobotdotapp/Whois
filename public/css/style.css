@@ -328,6 +328,70 @@ form {
 	padding: 1rem 5%;
 }
 
+#DeprecationBanner {
+	background-color: #7B2020;
+	color: white;
+	padding: 0.7rem 5%;
+	font-size: 0.95rem;
+	line-height: 1.4;
+}
+
+.deprecation-inner {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.deprecation-inner span {
+	flex: 1;
+	text-align: center;
+}
+
+#DeprecationBanner a {
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#DeprecationClose {
+	background-color: white;
+	border: none;
+	color: #7B2020;
+	border-radius: 10px;
+	padding: .5rem 1.1rem;
+	cursor: pointer;
+	font-size: 0.85rem;
+	font-weight: bold;
+	font-family: var(--font-family), sans-serif;
+	box-shadow: #2f2f2f94 2px 2px 4px;
+	transition: all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms;
+	width: auto;
+	flex-shrink: 0;
+	margin: 0;
+	line-height: normal;
+}
+
+#DeprecationClose:hover,
+#DeprecationClose:focus {
+	background-color: #f0f0f0;
+	box-shadow: #2f2f2f94 0 0 0;
+}
+
+@media screen and (max-width: 600px) {
+	.deprecation-inner {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#DeprecationClose {
+		width: auto;
+		flex-shrink: 0;
+	}
+}
+
 .user-banner {
 	object-fit: cover;
 	display: flex;
