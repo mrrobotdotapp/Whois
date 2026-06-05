@@ -28,8 +28,13 @@ router.post('/whois', async (req, res) => {
 router.get('/:userID', async (req, res) => {
     const userid = req.params.userID;
     const client = req.app.get('discordClient');
-
-    const user = userid === client.user.id ? client.user : await client.users.fetch(getID(userid)).catch(e => {});
+    
+if (!client.user) {
+    return res.render('index', { error: 'App is not ready yet, please try again.' });
+}
+const user = userid === client.user.id
+    ? client.user
+    : await client.users.fetch(getID(userid)).catch(e => {});
     if (!user) return res.render('index', {
         error: 'Invalid user ID !'
     });
